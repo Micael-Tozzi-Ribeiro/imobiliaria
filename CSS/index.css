@@ -1,74 +1,292 @@
 :root {
-  --navy: #0b2340;
-  --bg: #f8f9fb;
-  --white: #fff;
-  --shadow: 0 6px 18px rgba(12,20,35,0.08);
-  font-family: 'Montserrat', sans-serif;
+    --navy: #0b2340;
+    --bg-light: #f8f9fb;
+    --white: #fff;
 }
 
-/* Reset */
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--navy);
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg-light);
+    color: var(--navy);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
-/* Navbar */
-.logo {
-  height: 60px;
-  width: auto;
-}
 .navbar {
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-.navbar.scrolled {
-  background: var(--white) !important;
-  box-shadow: var(--shadow);
+    transition: background 0.3s;
 }
 
-/* Hero Carousel */
-.hero-carousel {
-  margin-top: 75px; /* espaço abaixo do header */
+.logo {
+    height: 60px;
+}
+
+.btn-toggle {
+    background: #f8f9fb;
+    color: var(--navy);
+    border: 1px solid #ccc;
+    font-weight: 600;
+    padding: 0.375rem 0.75rem;
+}
+
+body[data-bs-theme="dark"] .btn-toggle {
+    background: #222;
+    color: #f8f9fb;
+    border-color: #444;
+}
+
+.site-footer {
+    background: var(--navy);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
 }
 
 .carousel-item {
-  min-height: 85vh;
-  background: linear-gradient(to bottom right, #1f3b66, #0b2340);
-  color: var(--white);
-  padding: 2rem;
-  /* display flex removido aqui para não quebrar o carousel */
+    min-height: 38rem; /* altura aumentada */
+    background-color: var(--navy);
+    color: white;
+    padding: 3rem 0;
+    overflow: visible; /* garante que conteúdo extra não seja cortado */
 }
 
-.carousel-content {
-  width: 100%;
-  height: 100%;
+.carousel-item h3,
+.carousel-item p {
+    color: white;
 }
 
-.animate-up {
-  transform: translateY(40px);
-  opacity: 0;
-  transition: all 0.6s ease;
+.carousel-item .carousel-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
-.animate-play {
-  transform: translateY(0);
-  opacity: 1;
+.carousel-item .carousel-content .img-col {
+    flex: 1;
+    padding: 1rem;
 }
 
-
-/* Footer */
-.site-footer {
-  background: var(--navy);
+.carousel-item .carousel-content .info-col {
+    flex: 1;
+    padding: 1rem;
 }
 
-/* Dark Mode */
-body.dark {
-  background: #121212;
-  color: #f8f9fb;
+.carousel-item .info-col .btn-details {
+    margin-top: 0.5rem;
 }
-body.dark .navbar {
-  background: #222 !important;
+
+@media (max-width: 768px) {
+    .carousel-item {
+        min-height: auto; /* ajusta altura em mobile */
+        padding: 3rem 1rem;
+    }
+
+    .carousel-item .carousel-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .carousel-item .carousel-content .img-col,
+    .carousel-item .carousel-content .info-col {
+        padding: 0.5rem;
+    }
 }
-body.dark .site-footer {
-  background: #000;
+
+/* ---------- ESTILO DOS SLIDES 2, 3 e 4 ---------- */
+.carousel-item .slide-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center; /* centraliza horizontalmente */
+    text-align: center;
+    flex-wrap: wrap; /* garante responsividade */
+}
+
+/* imagem à esquerda */
+.slide-image {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center; /* centraliza horizontal */
+    align-items: center; /* centraliza vertical */
+}
+
+.slide-image .img-frame {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    width: 100%;
+    max-width: 560px;
+}
+
+.slide-image .img-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* card à direita */
+.slide-info {
+    flex: 1 1 45%;
+    background: #ffffff !important;
+    color: var(--navy);
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 12px 36px rgba(10, 14, 40, 0.25);
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza vertical dentro do card */
+    align-items: center; /* centraliza horizontal dentro do card */
+    text-align: center;
+}
+
+.img-frame {
+    width: 100px;
+}
+
+.slide-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.slide-info p.lead {
+    color: #444;
+    margin-bottom: 1rem;
+    line-height: 1.45;
+}
+
+/* linha de características */
+.features {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    margin: 1rem 0 1.25rem;
+    flex-wrap: wrap;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 700;
+    color: var(--navy);
+    background: #f1f6fb;
+    padding: .45rem .7rem;
+    border-radius: 8px;
+}
+
+/* botão */
+.btn-details {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.6rem 1.1rem;
+    font-weight: 700;
+    border: none;
+    display: inline-block;
+}
+
+/* controles e indicadores */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    width: 2.4rem;
+    height: 2.4rem;
+    background-size: 100% 100%;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+.carousel-indicators .active {
+    background-color: #fff;
+}
+
+/* grid só para o bloco de características do slide 3 */
+.slide-info .features-grid {
+    display: flex;
+    gap: 2rem;
+    margin-top: .6rem;
+    align-items: flex-start;
+    background-color: #f8fbff;
+    padding: .75rem;
+    border-radius: 8px;
+}
+
+/* cada coluna dentro da grid */
+.slide-info .feat-col {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    min-width: 120px;
+}
+
+/* cada item da coluna (ícone + texto) */
+.slide-info .feature-item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.slide-info .feature-item i {
+    width: 1.25rem;
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--navy);
+}
+
+/* responsivo: empilha colunas em telas pequenas */
+@media (max-width: 768px) {
+    .slide-info .features-grid {
+        flex-direction: column;
+        padding: .5rem;
+    }
+}
+
+/* estilo extra para o bloco infocasa */
+.infocasa {
+    background-color: #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100vh; /* altura total da tela */
+}
+
+.carousel-item img {
+  max-height: 400px;
+  width: auto;
+}
+
+.carousel-item .row {
+  align-items: center;
+}
+
+.card-bg {
+    background-color: rgba(0, 0, 0, 0.6); /* Ex: fundo semi-transparente preto */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.carousel-item .col-md-6 img {
+    margin-right: 120px; /* espaço abaixo da imagem */
 }
