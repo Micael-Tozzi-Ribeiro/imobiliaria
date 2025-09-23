@@ -285,8 +285,20 @@ body[data-bs-theme="dark"] .btn-toggle {
     background-color: rgba(0, 0, 0, 0.6); /* Ex: fundo semi-transparente preto */
     padding: 20px; /* Espaçamento interno */
     border-radius: 10px; /* Bordas arredondadas */
+    margin-left: 40px;
 }
 
 .carousel-item .col-md-6 img {
-    margin-right: 120px; /* espaço abaixo da imagem */
+    margin-left: 120px; /* espaço abaixo da imagem */
 }
+
+.carousel-item .slide-inner {
+    gap: 5rem; /* aumenta o espaço entre a imagem e o card */
+}
+
+.carousel-item .slide-inner {
+    display: flex;
+    gap: 5rem; /* aumenta o espaço entre a imagem e o card */
+    align-items: center;
+}
+
