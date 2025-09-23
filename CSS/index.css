@@ -285,11 +285,10 @@ body[data-bs-theme="dark"] .btn-toggle {
     background-color: rgba(0, 0, 0, 0.6); /* Ex: fundo semi-transparente preto */
     padding: 20px; /* Espaçamento interno */
     border-radius: 10px; /* Bordas arredondadas */
-    margin-left: 40px;
 }
 
 .carousel-item .col-md-6 img {
-    margin-left: 120px; /* espaço abaixo da imagem */
+    margin-right: 120px; /* espaço abaixo da imagem */
 }
 
 .carousel-item .slide-inner {
@@ -298,7 +297,198 @@ body[data-bs-theme="dark"] .btn-toggle {
 
 .carousel-item .slide-inner {
     display: flex;
-    gap: 5rem; /* aumenta o espaço entre a imagem e o card */
+    gap: 40px; /* aumenta o espaço entre a imagem e o card */
     align-items: center;
 }
 
+/* SOBRE NÓS */
+#sobre-nos {
+    padding: 60px 20px;
+    background-color: #f8f9fb; /* fundo claro */
+    color: #0b2340; /* texto escuro */
+}
+
+.sobre-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; /* espaço entre foto e texto */
+}
+
+.sobre-foto {
+    flex: 0 0 250px; /* tamanho fixo da foto */
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ccc; /* fundo caso não tenha imagem */
+}
+
+.sobre-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.sobre-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* CONTATO RÁPIDO */
+#contato-rapido {
+    padding: 60px 20px;
+    background-color: #fff; /* fundo claro */
+    color: #0b2340;
+    text-align: center;
+}
+
+#contato-rapido h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#contato-rapido p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.contato-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-contato input,
+#form-contato textarea {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+}
+
+#form-contato input:focus,
+#form-contato textarea:focus {
+    outline: none;
+    border-color: #0b2340;
+    box-shadow: 0 0 5px rgba(11, 35, 64, 0.3);
+}
+
+#form-contato button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #0b2340;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#form-contato button:hover {
+    background-color: #16375a;
+}
+
+.site-footer {
+    background-color: #0b2340;
+    color: #fff;
+    padding: 40px 20px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* espaçamento igual entre colunas */
+    align-items: flex-start; /* alinhamento vertical no topo das colunas */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1; /* cada coluna ocupa espaço igual */
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* tudo alinhado à esquerda */
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-left p,
+.footer-middle p,
+.footer-right li {
+    margin: 5px 0;
+    text-align: left;
+}
+
+.footer-middle h4,
+.footer-right h4 {
+    margin-bottom: 15px;
+}
+
+/* Lista de redes sociais */
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.social-list i {
+    font-size: 20px;
+}
+
+/* Direitos autorais */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Responsivo: empilha colunas verticalmente */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-col {
+        margin-bottom: 20px;
+    }
+}

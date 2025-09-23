@@ -137,7 +137,7 @@
                         <!-- Imagem -->
                         <div class="col-md-6 d-flex justify-content-center align-items-center">
                             <img src="https://arquitetogelker.com.br/wp-content/uploads/2021/07/fachadas-contemporaneas-2021-CASA-RS.jpg.webp"
-                                class="img-fluid rounded" alt="Casa de Campo" style="width: 140%; max-width: none;">
+                                class="img-fluid rounded" alt="Casa de Campo" style="width: 131%; max-width: none;">
                         </div>
 
                         <!-- Card -->
@@ -173,11 +173,11 @@
                         <!-- Imagem -->
                         <div class="col-md-6 d-flex justify-content-center align-items-center">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKjCf6zK-QyDJOYnQc9c0vIRLJu-CRf1TE2w&s"
-                                class="img-fluid rounded" alt="Casa de Praia">
+                                class="img-fluid rounded" alt="Casa de Praia" style="width: 400px; max-width: none;">
                         </div>
 
                         <!-- Card -->
-                        <div class="col-md-6 d-flex flex-column justify-content-center ps-4">
+                        <div class="col-md-6 d-flex flex-column justify-content-center ps-4 card-bg">
                             <h3>Casa de Praia</h3>
                             <p><i class="fa-solid fa-location-dot me-1"></i> Rio de janeiro - condomio Barra 488</p>
                             <p><strong>Preço:</strong> R$ 2.500.000</p>
@@ -214,7 +214,7 @@
                         </div>
 
                         <!-- Card -->
-                        <div class="col-md-6 d-flex flex-column justify-content-center ps-4">
+                        <div class="col-md-6 d-flex flex-column justify-content-center ps-4 card-bg">
                             <h3>Imóvel de Luxo</h3>
                             <p><strong>Preço:</strong> R$ 1.200.000</p>
                             <p>Descrição resumida do imóvel de luxo.</p>
@@ -237,58 +237,125 @@
     </div>
 
 
-    <div>
-        <p><a href="#">ABC</a></p>
-    </div>
+    <!-- SOBRE NÓS -->
+    <section id="sobre-nos">
+        <div class="sobre-container">
+            <!-- Foto do fundador -->
+            <div class="sobre-foto">
+                <!-- Substitua pelo <img> real -->
+                <img src="IMG/imobi-removebg-preview.png" alt="Fundador da Falcão Imóveis">
+            </div>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <p>© <span id="year"></span> Falcão Imóveis. Todos os direitos reservados.</p>
+            <!-- Texto -->
+            <div class="sobre-texto">
+                <h2>Sobre Nós</h2>
+                <p>
+                    Com mais de <strong>15 anos de experiência</strong> no mercado imobiliário, a Falcão Imóveis
+                    se destaca por oferecer um atendimento personalizado, profissionalismo e compromisso com
+                    a satisfação de nossos clientes.
+                </p>
+                <p>
+                    Nossa equipe é especializada em encontrar o imóvel perfeito para cada perfil, desde casas
+                    de campo e praias até imóveis de luxo em regiões exclusivas. Trabalhamos para transformar
+                    o sonho da casa própria em realidade, com transparência e confiança.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO RÁPIDO -->
+    <section id="contato-rapido">
+        <div class="contato-container">
+            <h2>Contato Rápido</h2>
+            <p>Preencha o formulário abaixo e entraremos em contato com você o mais rápido possível.</p>
+            <form id="form-contato">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-item">
+            <h4>Contato</h4>
+            <p>Telefone: (11) 4048-1353</p>
+            <p>Email: E915749A@EDUCACAO.SP.GOV.BR</p>
+        </div>
+        <div class="footer-item">
+            <h4>Endereço</h4>
+            <p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Rua+Visconde+de+Itaborai,+235,+Diadema,+SP"
+                    target="_blank" class="map-link" aria-label="Abrir localização no Google Maps">
+                    <i class="fas fa-map-marker-alt"></i> Rua Visconde de Itaborai, 235
+                </a>
+            </p>
+            <p>Centro - Diadema</p>
+            <p>CEP: 09910-520</p>
+        </div>
+
+        <div class="footer-item">
+            <h4>Redes Sociais</h4>
+            <p><a href="https://www.facebook.com/groups/1447773665457822/" target="_blank">Facebook</a></p>
+            <p><a href="https://www.instagram.com/eejosemarcato/?hl=en" target="_blank">Instagram</a></p>
+            <p><a href="https://web.whatsapp.com/" target="_blank">Whatsapp</a></p>
+        </div>
+
+        <div class="copyright">
+            &copy; 2025 Escola Estadual José Marcato - Todos os direitos reservados
+        </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        // Atualiza ano
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Dark mode toggle
-        const themeToggleButtons = document.querySelectorAll('[data-bs-theme-value]');
-        const themeIconUse = document.querySelector('.theme-icon-active use');
-
-        const icons = {
-            light: "#sun-fill",
-            dark: "#moon-stars-fill",
-            auto: "#circle-half"
-        };
-
-        function setTheme(theme) {
-            document.documentElement.setAttribute('data-bs-theme', theme);
-            themeToggleButtons.forEach(btn => btn.querySelector('svg.ms-auto').classList.add('d-none'));
-            document.querySelector(`[data-bs-theme-value="${theme}"] svg.ms-auto`).classList.remove('d-none');
-            themeIconUse.setAttribute('href', icons[theme]);
-        }
-
-        // Inicializa
-        let currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'auto';
-        setTheme(currentTheme);
-
-        themeToggleButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const theme = btn.getAttribute('data-bs-theme-value');
-                setTheme(theme);
-            });
-        });
-
-        // Inicializa carousel automático
-        const carouselElement = document.querySelector('#mainCarousel');
-        const carousel = new bootstrap.Carousel(carouselElement, {
-            interval: 5000, // 5 segundos
-            ride: 'carousel'
-        });
-    </script>
 
 </body>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Atualiza ano
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark mode toggle
+    const themeToggleButtons = document.querySelectorAll('[data-bs-theme-value]');
+    const themeIconUse = document.querySelector('.theme-icon-active use');
+
+    const icons = {
+        light: "#sun-fill",
+        dark: "#moon-stars-fill",
+        auto: "#circle-half"
+    };
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-bs-theme', theme);
+        themeToggleButtons.forEach(btn => btn.querySelector('svg.ms-auto').classList.add('d-none'));
+        document.querySelector(`[data-bs-theme-value="${theme}"] svg.ms-auto`).classList.remove('d-none');
+        themeIconUse.setAttribute('href', icons[theme]);
+    }
+
+    // Inicializa
+    let currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'auto';
+    setTheme(currentTheme);
+
+    themeToggleButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const theme = btn.getAttribute('data-bs-theme-value');
+            setTheme(theme);
+        });
+    });
+
+    // Inicializa carousel automático
+    const carouselElement = document.querySelector('#mainCarousel');
+    const carousel = new bootstrap.Carousel(carouselElement, {
+        interval: 5000, // 5 segundos
+        ride: 'carousel'
+    });
+
+
+</script>
 
 </html>
