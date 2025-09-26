@@ -4,22 +4,64 @@
     --white: #fff;
 }
 
+/* ===== BASE ===== */
 body {
     font-family: 'Montserrat', sans-serif;
     background: var(--bg-light);
     color: var(--navy);
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    margin: 0;
+    padding-top: 3rem; /* espaço para navbar fixa */
 }
 
+/* ===== NAVBAR ===== */
 .navbar {
-    transition: background 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1030;
+    background-color: var(--white);
 }
 
-.logo {
-    height: 60px;
+.navbar-brand .logo {
+    height: 50px;
+    width: auto;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
 }
 
+.navbar-brand .logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 3px;
+}
+
+.navbar-menu li a:hover {
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+}
+
+@media (max-width: 992px) {
+    .navbar-menu {
+        display: none;
+    }
+}
+
+/* ===== BOTÕES ===== */
 .btn-toggle {
     background: #f8f9fb;
     color: var(--navy);
@@ -34,89 +76,39 @@ body[data-bs-theme="dark"] .btn-toggle {
     border-color: #444;
 }
 
-.site-footer {
-    background: var(--navy);
-    color: var(--white);
-    padding: 2rem 0;
-    text-align: center;
+/* ===== CAROUSEL ===== */
+.carousel {
+    min-height: 65vh;
+    background-color: var(--navy);
+}
+
+.carousel-inner {
+    min-height: 65vh;
 }
 
 .carousel-item {
-    min-height: 38rem;
-    /* altura aumentada */
-    background-color: var(--navy);
-    color: white;
-    padding: 3rem 0;
-    overflow: visible;
-    /* garante que conteúdo extra não seja cortado */
+    display: block; /* cada slide ocupa 100% */
+    min-height: 65vh;
+    overflow: hidden;
+    color: #fff;
 }
 
-.carousel-item h3,
-.carousel-item p {
-    color: white;
-}
-
-.carousel-item .carousel-content {
+.slide-inner {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.carousel-item .carousel-content .img-col {
-    flex: 1;
-    padding: 1rem;
-}
-
-.carousel-item .carousel-content .info-col {
-    flex: 1;
-    padding: 1rem;
-}
-
-.carousel-item .info-col .btn-details {
-    margin-top: 0.5rem;
-}
-
-@media (max-width: 768px) {
-    .carousel-item {
-        min-height: auto;
-        /* ajusta altura em mobile */
-        padding: 3rem 1rem;
-    }
-
-    .carousel-item .carousel-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .carousel-item .carousel-content .img-col,
-    .carousel-item .carousel-content .info-col {
-        padding: 0.5rem;
-    }
-}
-
-/* ---------- ESTILO DOS SLIDES 2, 3 e 4 ---------- */
-.carousel-item .slide-inner {
+    flex-wrap: wrap;
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    gap: 2.5rem;
     align-items: center;
     justify-content: center;
-    /* centraliza horizontalmente */
-    text-align: center;
-    flex-wrap: wrap;
-    /* garante responsividade */
+    padding: 2rem;
 }
 
-/* imagem à esquerda */
 .slide-image {
     flex: 1 1 50%;
     display: flex;
     justify-content: center;
-    /* centraliza horizontal */
     align-items: center;
-    /* centraliza vertical */
 }
 
 .slide-image .img-frame {
@@ -134,26 +126,19 @@ body[data-bs-theme="dark"] .btn-toggle {
     object-fit: cover;
 }
 
-/* card à direita */
 .slide-info {
     flex: 1 1 45%;
-    background: #ffffff !important;
+    min-width: 320px;
+    background: #fff;
     color: var(--navy);
     padding: 2rem;
     border-radius: 14px;
     box-shadow: 0 12px 36px rgba(10, 14, 40, 0.25);
-    min-width: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* centraliza vertical dentro do card */
     align-items: center;
-    /* centraliza horizontal dentro do card */
     text-align: center;
-}
-
-.img-frame {
-    width: 100px;
 }
 
 .slide-info h3 {
@@ -168,7 +153,7 @@ body[data-bs-theme="dark"] .btn-toggle {
     line-height: 1.45;
 }
 
-/* linha de características */
+/* Características */
 .features {
     display: flex;
     gap: 1.25rem;
@@ -188,7 +173,7 @@ body[data-bs-theme="dark"] .btn-toggle {
     border-radius: 8px;
 }
 
-/* botão */
+/* Botão detalhes */
 .btn-details {
     background: var(--navy);
     color: #fff;
@@ -199,30 +184,7 @@ body[data-bs-theme="dark"] .btn-toggle {
     display: inline-block;
 }
 
-/* controles e indicadores */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 60px;
-    opacity: 1;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: invert(1);
-    width: 2.4rem;
-    height: 2.4rem;
-    background-size: 100% 100%;
-}
-
-.carousel-indicators [data-bs-target] {
-    background-color: rgba(255, 255, 255, 0.45);
-}
-
-.carousel-indicators .active {
-    background-color: #fff;
-}
-
-/* grid só para o bloco de características do slide 3 */
+/* Grid de features */
 .slide-info .features-grid {
     display: flex;
     gap: 2rem;
@@ -233,7 +195,6 @@ body[data-bs-theme="dark"] .btn-toggle {
     border-radius: 8px;
 }
 
-/* cada coluna dentro da grid */
 .slide-info .feat-col {
     display: flex;
     flex-direction: column;
@@ -241,7 +202,6 @@ body[data-bs-theme="dark"] .btn-toggle {
     min-width: 120px;
 }
 
-/* cada item da coluna (ícone + texto) */
 .slide-info .feature-item {
     display: flex;
     align-items: center;
@@ -257,75 +217,27 @@ body[data-bs-theme="dark"] .btn-toggle {
     color: var(--navy);
 }
 
-/* responsivo: empilha colunas em telas pequenas */
+/* Responsivo carousel */
 @media (max-width: 768px) {
+    .slide-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    .slide-info {
+        padding: 1.2rem;
+    }
     .slide-info .features-grid {
         flex-direction: column;
         padding: .5rem;
     }
 }
 
-/* estilo extra para o bloco infocasa */
-.infocasa {
-    background-color: #ccc;
-    padding: 1rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    /* centraliza horizontalmente */
-    align-items: center;
-    /* centraliza verticalmente */
-}
-
-.carousel,
-.carousel-inner,
-.carousel-item {
-    height: 100vh;
-    /* altura total da tela */
-}
-
-.carousel-item img {
-    max-height: 400px;
-    width: auto;
-}
-
-.carousel-item .row {
-    align-items: center;
-}
-
-.card-bg {
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Ex: fundo semi-transparente preto */
-    padding: 20px;
-    /* Espaçamento interno */
-    border-radius: 10px;
-    /* Bordas arredondadas */
-}
-
-.carousel-item .col-md-6 img {
-    margin-right: 120px;
-    /* espaço abaixo da imagem */
-}
-
-.carousel-item .slide-inner {
-    gap: 5rem;
-    /* aumenta o espaço entre a imagem e o card */
-}
-
-.carousel-item .slide-inner {
-    display: flex;
-    gap: 40px;
-    /* aumenta o espaço entre a imagem e o card */
-    align-items: center;
-}
-
-/* SOBRE NÓS */
+/* ===== SOBRE NÓS ===== */
 #sobre-nos {
     padding: 60px 20px;
-    background-color: #f8f9fb;
-    /* fundo claro */
-    color: #0b2340;
-    /* texto escuro */
+    background-color: var(--bg-light);
+    color: var(--navy);
 }
 
 .sobre-container {
@@ -336,17 +248,14 @@ body[data-bs-theme="dark"] .btn-toggle {
     max-width: 1200px;
     margin: 0 auto;
     gap: 40px;
-    /* espaço entre foto e texto */
 }
 
 .sobre-foto {
     flex: 0 0 250px;
-    /* tamanho fixo da foto */
     height: 250px;
     border-radius: 50%;
     overflow: hidden;
     background-color: #ccc;
-    /* fundo caso não tenha imagem */
 }
 
 .sobre-foto img {
@@ -371,12 +280,11 @@ body[data-bs-theme="dark"] .btn-toggle {
     margin-bottom: 15px;
 }
 
-/* CONTATO RÁPIDO */
+/* ===== CONTATO RÁPIDO ===== */
 #contato-rapido {
     padding: 60px 20px;
     background-color: #fff;
-    /* fundo claro */
-    color: #0b2340;
+    color: var(--navy);
     text-align: center;
 }
 
@@ -413,14 +321,14 @@ body[data-bs-theme="dark"] .btn-toggle {
 #form-contato input:focus,
 #form-contato textarea:focus {
     outline: none;
-    border-color: #0b2340;
+    border-color: var(--navy);
     box-shadow: 0 0 5px rgba(11, 35, 64, 0.3);
 }
 
 #form-contato button {
     padding: 12px 20px;
     font-size: 1rem;
-    background-color: #0b2340;
+    background-color: var(--navy);
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -432,7 +340,7 @@ body[data-bs-theme="dark"] .btn-toggle {
     background-color: #16375a;
 }
 
-/* ===== Rodapé ===== */
+/* ===== FOOTER ===== */
 footer {
     background-color: #222;
     color: #eee;
@@ -444,8 +352,8 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+    margin: 0;
 }
-
 
 footer .footer-item {
     min-width: 220px;
@@ -480,34 +388,13 @@ footer .footer-item a:hover {
 }
 
 .map-link:hover {
-    text-decoration: underline;
     color: #FFD700;
 }
 
-.map-link i {
-    font-size: 1.2rem;
-    color: #FFD700;
-}
-
-footer .copyright {
-    width: 100%;
-    margin-top: 20px;
-    border-top: 1px solid #555;
-    padding-top: 15px;
-    font-size: 0.85rem;
-    color: #aaa;
-    text-align: center;
-}
-
-
-
-/* ===== Redes Sociais no Footer ===== */
 footer .social-icons {
     display: grid;
     grid-template-columns: 30px auto;
-    /* primeira coluna só para ícones */
     gap: 10px 12px;
-    /* linha, coluna */
     align-items: center;
 }
 
@@ -515,12 +402,10 @@ footer .social-icons i {
     font-size: 1.3rem;
     color: #FFD700;
     justify-self: center;
-    /* centraliza ícones na coluna */
 }
 
 footer .social-icons a {
     display: contents;
-    /* permite que o ícone e o texto ocupem colunas diferentes */
     color: #FFD700;
     font-size: 1rem;
     font-weight: 500;
@@ -531,5 +416,14 @@ footer .social-icons a {
 footer .social-icons a:hover i,
 footer .social-icons a:hover span {
     color: #fff;
-    /* no hover muda ícone e texto juntos */
+}
+
+footer .copyright {
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #aaa;
+    text-align: center;
 }

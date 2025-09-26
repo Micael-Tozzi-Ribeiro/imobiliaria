@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>José Marcato - Cursos</title>
+    <link rel="stylesheet" href="../CSS/imoveis.css" />
+    <!-- Font Awesome CDN para ícones sociais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Fonts: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../IMAGENS/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../IMAGENS/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../IMAGENS/logo.png">
+</head>
+
+<body>
+
+    <!-- Faixa Superior com Logos -->
+    <div class="top-bar">
+        <div class="logo-container">
+            <img src="Escola-Site/IMAGENS/logo.png" alt="Logo da Escola José Marcato">
+        </div>
+        <div class="logo-container">
+            <img src="Escola-Site/IMAGENS/gov.png" alt="Logo Governo de São Paulo" />
+        </div>
+    </div>
+
+    <!-- Contatos / Nome escola -->
+    <div class="top-bar-name">
+        <div class="school-name">
+            <p>Falcão Imobiliária</p>
+        </div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Escola-Site/HTML/sobre.html">Sobre</a></li>
+                <li><a href="Escola-Site/HTML/cursos.html" class="ativo">Imóveis</a></li>
+                <li><a href="Escola-Site/HTML/noticias.html">Notícias</a></li>
+                <li><a href="Escola-Site/HTML/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Banner -->
+    <section class="banner">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/house-1867187_640.jpg" alt="Banner Cursos Técnicos">
+        <div class="banner-texto">
+            <h2>Galeria De Imóveis</h2>
+            <p>Conheça aqui o seu futuro imóvel!</p>
+        </div>
+    </section>
+
+    <!-- ===== Filtros ===== -->
+    <div class="wrap">
+        <div id="filters" class="filters" role="toolbar" aria-label="Filtros">
+
+            <div class="filters-left filters-right">
+                <button class="pill" data-filter="tudo" aria-pressed="true">Tudo</button>
+                <button class="pill" data-filter="comprar" aria-pressed="false">Comprar</button>
+                <button class="pill" data-filter="alugar" aria-pressed="false">Alugar</button>
+                <button class="limpar">Limpar</button>
+                <select class="sort">
+                    <option value="todos">Filtrar por Estado</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="mg">Minas Gerais</option>
+                    <!-- Adicione outros estados aqui -->
+                </select>
+                <p class="text">Exibindo <span id="counter">0</span> itens!</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Conteúdo -->
+    <main class="galeria">
+        <article class="card-imovel" data-tipo="comprar" data-estado="rj">
+            <div class="card-img">
+                <div class="carousel">
+                    <img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271_640.jpg"
+                        alt="Sala da Casa" class="carousel-img active">
+                    <img src="https://cdn.pixabay.com/photo/2014/05/02/14/37/gazebo-in-itacare-336036_640.jpg"
+                        alt="Quarto da Casa" class="carousel-img">
+                    <img src="https://cdn.pixabay.com/photo/2019/12/29/11/19/beach-house-4726764_640.jpg"
+                        alt="Cozinha da Casa" class="carousel-img">
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Casa de Praia Luxo</h3>
+                <p class="localizacao"><i class="fa-solid fa-location-dot"></i> Rio de Janeiro - Condomínio Barra 488
+                </p>
+                <p class="preco"><strong>Preço:</strong> R$ 2.500.000</p>
+                <div class="detalhes">
+                    <div class="detalhe">
+                        <p><i class="fa-solid fa-bed"></i> 5 Quartos</p>
+                        <p><i class="fa-solid fa-bath"></i> 4 Banheiros</p>
+                    </div>
+                    <div class="detalhe">
+                        <p><i class="fa-solid fa-car"></i> 3 Vagas</p>
+                        <p><i class="fa-solid fa-ruler-combined"></i> 400 m²</p>
+                    </div>
+                </div>
+                <p class="descricao">Casa de praia com vista para o mar, ideal para quem busca luxo, conforto e lazer.
+                    Venha ver pessoalmente!
+                </p>
+                <a href="#detalhes" class="btn-detalhes">Ver Detalhes</a>
+            </div>
+        </article>
+
+        <article class="card-imovel" data-tipo="alugar" data-estado="sp">
+            <div class="card-img">
+                <div class="carousel">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/house-1867187_640.jpg"
+                        alt="Sala do Apartamento" class="carousel-img active">
+                    <img src="https://media.istockphoto.com/id/2172327228/pt/foto/close-up-of-gray-leather-bed-with-pillow-blanket-black-bedside-table-with-tree-twig-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=yRFGuUCH6q79l-Ju-r2yJUtAQ4CDUm6vG8ovfOHoQUw="
+                        alt="Quarto do Apartamento" class="carousel-img">
+                    <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_640.jpg"
+                        alt="Cozinha do Apartamento" class="carousel-img">
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Apartamento Moderno</h3>
+                <p class="localizacao"><i class="fa-solid fa-location-dot"></i> São Paulo - Jardins, Rua Bela
+                    Vista 120</p>
+                <p class="preco"><strong>Preço:</strong> R$ 3.200/mês</p>
+                <div class="detalhes">
+                    <div class="detalhe">
+                        <p><i class="fa-solid fa-bed"></i> 3 Quartos</p>
+                        <p><i class="fa-solid fa-bath"></i> 2 Banheiros</p>
+                    </div>
+                    <div class="detalhe">
+                        <p><i class="fa-solid fa-car"></i> 1 Vaga</p>
+                        <p><i class="fa-solid fa-ruler-combined"></i> 120 m²</p>
+                    </div>
+                </div>
+                <p class="descricao">Apartamento moderno e bem localizado, ideal para famílias pequenas e comodidade
+                    urbana.</p>
+                <a href="#detalhes" class="btn-detalhes">Ver Detalhes</a>
+            </div>
+        </article>
+
+        <article class="card-imovel" data-tipo="comprar" data-estado="mg">
+            <div class="card-img">
+                <div class="carousel">
+                    <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_640.jpg" alt="Sala do Imóvel"
+                        class="carousel-img active">
+                    <img src="https://media.istockphoto.com/id/2172327228/pt/foto/close-up-of-gray-leather-bed-with-pillow-blanket-black-bedside-table-with-tree-twig-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=yRFGuUCH6q79l-Ju-r2yJUtAQ4CDUm6vG8ovfOHoQUw="
+                        alt="Quarto do Imóvel" class="carousel-img">
+                    <img src="https://media.istockphoto.com/id/2184601017/pt/foto/empty-table-front-kitchen-blurred-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=CPDp6yERBkn2Zo_eUoFjsS0q1Gwp5NvjoGW9B1wWlTo="
+                        alt="Cozinha do Imóvel" class="carousel-img">
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Sítio Aconchegante</h3>
+                <p class="localizacao"><i class="fa-solid fa-location-dot"></i> Minas Gerais - Rural, Estrada do
+                    Sol 345</p>
+                <p class="preco"><strong>Preço:</strong> R$ 1.200.000</p>
+                <div class="detalhes">
+                    <div class="detalhe">
+                        <p><i class="fa-solid fa-bed"></i> 4 Quartos</p>
+                        <p><i class="fa-solid fa-bath"></i> 3 Banheiros</p>
+                    </div>
+                    <div class="detalhe">
+                        <p><i class="fa-solid fa-car"></i> 2 Vagas</p>
+                        <p><i class="fa-solid fa-ruler-combined"></i> 350 m²</p>
+                    </div>
+                </div>
+                <p class="descricao">Sítio aconchegante, perfeito para quem busca tranquilidade e contato com a
+                    natureza, Venha ver pessoalmente!</p>
+                <a href="#detalhes" class="btn-detalhes">Ver Detalhes</a>
+            </div>
+        </article>
+
+        <article class="card-imovel" data-tipo="alugar" data-estado="rj">
+            <div class="card-img">
+                <div class="carousel">
+                    <img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271_640.jpg"
+                        alt="Sala do Imóvel" class="carousel-img active">
+                    <img src="https://cdn.pixabay.com/photo/2019/12/29/11/19/beach-house-4726764_640.jpg"
+                        alt="Quarto do Imóvel" class="carousel-img">
+                    <img src="https://cdn.pixabay.com/photo/2014/05/02/14/37/gazebo-in-itacare-336036_640.jpg"
+                        alt="Cozinha do Imóvel" class="carousel-img">
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Apartamento Vista Mar</h3>
+                <p class="localizacao"><i class="fa-solid fa-location-dot"></i> Rio de Janeiro - Copacabana, Av. ATL 110
+                </p>
+                <p class="preco"><strong>Preço:</strong> R$ 5.000/mês</p>
+                <div class="detalhes">
+                    <div class="detalhe">
+                        <p><i class="fa-solid fa-bed"></i> 2 Quartos</p>
+                        <p><i class="fa-solid fa-bath"></i> 2 Banheiros</p>
+                    </div>
+                    <div class="detalhe">
+                        <p><i class="fa-solid fa-car"></i> 1 Vaga</p>
+                        <p><i class="fa-solid fa-ruler-combined"></i> 90 m²</p>
+                    </div>
+                </div>
+                <p class="descricao">Apartamento com vista para o mar, ideal para quem gosta de praias e lazer urbano, Venha ver pessoalmente!
+                </p>
+                <a href="#detalhes" class="btn-detalhes">Ver Detalhes</a>
+            </div>
+        </article>
+
+        <article class="card-imovel" data-tipo="comprar" data-estado="sp">
+            <div class="card-img">
+                <div class="carousel">
+                    <img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271_640.jpg"
+                        alt="Sala do Imóvel" class="carousel-img active">
+                    <img src="https://media.istockphoto.com/id/2172327228/pt/foto/close-up-of-gray-leather-bed-with-pillow-blanket-black-bedside-table-with-tree-twig-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=yRFGuUCH6q79l-Ju-r2yJUtAQ4CDUm6vG8ovfOHoQUw="
+                        alt="Quarto do Imóvel" class="carousel-img">
+                    <img src="https://cdn.pixabay.com/photo/2019/12/29/11/19/beach-house-4726764_640.jpg"
+                        alt="Cozinha do Imóvel" class="carousel-img">
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Casa Moderna</h3>
+                <p class="localizacao"><i class="fa-solid fa-location-dot"></i> São Paulo - Moema, Rua das Flores
+                    78</p>
+                <p class="preco"><strong>Preço:</strong> R$ 1.800.000</p>
+                <div class="detalhes">
+                    <div class="detalhe">
+                        <p><i class="fa-solid fa-bed"></i> 4 Quartos</p>
+                        <p><i class="fa-solid fa-bath"></i> 3 Banheiros</p>
+                    </div>
+                    <div class="detalhe">
+                        <p><i class="fa-solid fa-car"></i> 2 Vagas</p>
+                        <p><i class="fa-solid fa-ruler-combined"></i> 300 m²</p>
+                    </div>
+                </div>
+                <p class="descricao">Casa moderna com design sofisticado, ideal para famílias que buscam conforto e
+                    estilo, Venha ver pessoalmente!</p>
+                <a href="#detalhes" class="btn-detalhes">Ver Detalhes</a>
+            </div>
+        </article>
+
+        <article class="card-imovel" data-tipo="alugar" data-estado="mg">
+            <div class="card-img">
+                <div class="carousel">
+                    <img src="https://media.istockphoto.com/id/1312439845/pt/foto/stylish-living-room-interior-with-beautiful-house-plants.webp?a=1&b=1&s=612x612&w=0&k=20&c=T85_30YwWlPg7y5vsbjsr91VA_FwhZ_yl59slUy3Za4="
+                        alt="Sala do Imóvel" class="carousel-img active">
+                    <img src="https://media.istockphoto.com/id/2172327228/pt/foto/close-up-of-gray-leather-bed-with-pillow-blanket-black-bedside-table-with-tree-twig-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=yRFGuUCH6q79l-Ju-r2yJUtAQ4CDUm6vG8ovfOHoQUw="
+                        alt="Quarto do Imóvel" class="carousel-img">
+                    <img src="https://cdn.pixabay.com/photo/2014/05/02/14/37/gazebo-in-itacare-336036_640.jpg"
+                        alt="Cozinha do Imóvel" class="carousel-img">
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="card-info">
+                <h3>Chácara Aconchegante</h3>
+                <p class="localizacao"><i class="fa-solid fa-location-dot"></i> Minas Gerais - Vale V,
+                    Estrada Serra 567</p>
+                <p class="preco"><strong>Preço:</strong> R$ 2.500/mês</p>
+                <div class="detalhes">
+                    <div class="detalhe">
+                        <p><i class="fa-solid fa-bed"></i> 3 Quartos</p>
+                        <p><i class="fa-solid fa-bath"></i> 2 Banheiros</p>
+                    </div>
+                    <div class="detalhe">
+                        <p><i class="fa-solid fa-car"></i> 2 Vagas</p>
+                        <p><i class="fa-solid fa-ruler-combined"></i> 250 m²</p>
+                    </div>
+                </div>
+                <p class="descricao">Chácara ideal para quem busca tranquilidade e contato com a natureza, Venha ver pessoalmente!</p>
+                <a href="#detalhes" class="btn-detalhes">Ver Detalhes</a>
+            </div>
+        </article>
+
+    </main>
+
+
+    <div class="img-modal" id="imgModal">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <img id="modalImg" src="" alt="Imagem Ampliada">
+    </div>
+
+
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-item">
+            <h4>Contato</h4>
+            <p>Telefone: (11) 4048-1353</p>
+            <p>Email: e915749a@educacao.sp.gov.br</p>
+        </div>
+        <div class="footer-item">
+            <h4>Endereço</h4>
+            <p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Rua+Visconde+de+Itaborai,+235,+Diadema,+SP"
+                    target="_blank" class="map-link" aria-label="Abrir localização no Google Maps">
+                    <i class="fas fa-map-marker-alt"></i> Rua Visconde de Itaborai, 235
+                </a>
+            </p>
+            <p>Centro - Diadema</p>
+            <p>CEP: 09910-520</p>
+        </div>
+        <div class="footer-item">
+            <h4>Redes Sociais</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/groups/1447773665457822/" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/eejosemarcato/?hl=en" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://wa.me/551140481353?text=Olá,+gostaria+de+mais+informações+sobre+a+escola."
+                    target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.linkedin.com/feed/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Falcão Imobiliária - Todos os direitos reservados
+        </div>
+    </footer>
+
+</body>
+
+<script src="../JS/imoveis.js">
+</script>
+
+</html>

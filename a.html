@@ -29,7 +29,7 @@
             <!-- Menu de navegação -->
             <ul class="navbar-menu">
                 <li><a href="#inicio">Início</a></li>
-                <li><a href="HTML/imoveis.html">Imóveis</a></li>
+                <li><a href="#imoveis">Imóveis</a></li>
                 <li><a href="#sobre-nos">Sobre Nós</a></li>
                 <li><a href="#contato-rapido">Contato</a></li>
             </ul>
@@ -113,64 +113,126 @@
         </symbol>
     </svg>
 
-    <!-- CAROUSEL -->
+    <!-- CAROUSEL PRONTO -->
     <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
-        <!-- Indicadores -->
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
             <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
             <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
         </div>
 
-        <!-- Slides -->
         <div class="carousel-inner">
+
             <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="slide-inner">
-                    <div class="slide-image">
-                        <div class="img-frame">
-                            <img src="slide1.jpg" alt="Slide 1">
-                        </div>
-                    </div>
-                    <div class="slide-info">
-                        <h3>Título do Slide 1</h3>
-                        <p class="lead">Descrição curta do primeiro slide.</p>
-                        <button class="btn-details">Saiba Mais</button>
+            <div class="carousel-item active"
+                style="background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;">
+                <div class="d-flex h-100 justify-content-center align-items-center text-center text-white">
+                    <div>
+                        <h1 class="display-4">Falcão Imóveis</h1>
+                        <p class="lead">Encontre o lar dos seus sonhos conosco</p>
+                        <a href="#imoveis" class="btn btn-light btn-lg me-2">Ver Imóveis</a>
+                        <a href="#contato" class="btn btn-outline-light btn-lg">Entrar em Contato</a>
                     </div>
                 </div>
             </div>
 
             <!-- Slide 2 -->
             <div class="carousel-item">
-                <div class="slide-inner">
-                    <div class="slide-image">
-                        <div class="img-frame">
-                            <img src="slide2.jpg" alt="Slide 2">
+                <div class="d-flex h-100 justify-content-center align-items-center container">
+                    <div class="row w-75">
+
+                        <!-- Imagem -->
+                        <div class="col-md-6 d-flex justify-content-center align-items-center">
+                            <img src="https://arquitetogelker.com.br/wp-content/uploads/2021/07/fachadas-contemporaneas-2021-CASA-RS.jpg.webp"
+                                class="img-fluid rounded" alt="Casa de Campo" style="width: 131%; max-width: none;">
                         </div>
-                    </div>
-                    <div class="slide-info">
-                        <h3>Título do Slide 2</h3>
-                        <p class="lead">Descrição curta do segundo slide.</p>
-                        <button class="btn-details">Saiba Mais</button>
+
+                        <!-- Card -->
+                        <div class="col-md-6 d-flex flex-column justify-content-center ps-4 card-bg">
+                            <h3>Casa de Campo</h3>
+                            <p><i class="fa-solid fa-location-dot me-1"></i> Belo Horizonte - MG</p>
+                            <p><strong>Preço:</strong> R$ 850.000</p>
+                            <!-- Informações em duas colunas -->
+                            <div class="row">
+                                <div class="col-6">
+                                    <p><i class="fa-solid fa-bed me-1"></i> 5 Quartos</p>
+                                    <p><i class="fa-solid fa-bath me-1"></i> 4 Banheiros</p>
+                                </div>
+                                <div class="col-6">
+                                    <p><i class="fa-solid fa-car me-1"></i> 3 Vagas</p>
+                                    <p><i class="fa-solid fa-ruler-combined me-1"></i> 400 m²</p>
+                                </div>
+                            </div>
+                            <p>Espaçosa casa de campo com área verde, ideal para quem busca tranquilidade e contato com
+                                a natureza.</p>
+                            <a href="#detalhes" class="btn btn-light btn-details">Ver Detalhes</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 3 -->
+            <!-- Slide 3 ajustado com infos em 2 colunas -->
             <div class="carousel-item">
-                <div class="slide-inner">
-                    <div class="slide-image">
-                        <div class="img-frame">
-                            <img src="slide3.jpg" alt="Slide 3">
+                <div class="d-flex h-100 justify-content-center align-items-center container">
+                    <div class="row w-75">
+
+                        <!-- Imagem -->
+                        <div class="col-md-6 d-flex justify-content-center align-items-center">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKjCf6zK-QyDJOYnQc9c0vIRLJu-CRf1TE2w&s"
+                                class="img-fluid rounded" alt="Casa de Praia" style="width: 400px; max-width: none;">
                         </div>
-                    </div>
-                    <div class="slide-info">
-                        <h3>Título do Slide 3</h3>
-                        <p class="lead">Descrição curta do terceiro slide.</p>
-                        <button class="btn-details">Saiba Mais</button>
+
+                        <!-- Card -->
+                        <div class="col-md-6 d-flex flex-column justify-content-center ps-4 card-bg">
+                            <h3>Casa de Praia</h3>
+                            <p><i class="fa-solid fa-location-dot me-1"></i> Rio de janeiro - condomio Barra 488</p>
+                            <p><strong>Preço:</strong> R$ 2.500.000</p>
+
+                            <!-- Informações em duas colunas -->
+                            <div class="row">
+                                <div class="col-6">
+                                    <p><i class="fa-solid fa-bed me-1"></i> 5 Quartos</p>
+                                    <p><i class="fa-solid fa-bath me-1"></i> 4 Banheiros</p>
+                                </div>
+                                <div class="col-6">
+                                    <p><i class="fa-solid fa-car me-1"></i> 3 Vagas</p>
+                                    <p><i class="fa-solid fa-ruler-combined me-1"></i> 400 m²</p>
+                                </div>
+                            </div>
+
+                            <p>Casa de praia com vista para o mar, ideal para quem busca luxo, conforto e lazer.</p>
+                            <a href="#detalhes" class="btn btn-light btn-details">Ver Detalhes</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <div class="d-flex h-100 justify-content-center align-items-center container">
+                    <div class="row w-75">
+
+                        <!-- Imagem -->
+                        <div class="col-md-6 d-flex justify-content-center align-items-center">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+                                class="img-fluid rounded" alt="Outro Imóvel">
+                        </div>
+
+                        <!-- Card -->
+                        <div class="col-md-6 d-flex flex-column justify-content-center ps-4 card-bg">
+                            <h3>Imóvel de Luxo</h3>
+                            <p><strong>Preço:</strong> R$ 1.200.000</p>
+                            <p>Descrição resumida do imóvel de luxo.</p>
+                            <a href="#detalhes" class="btn btn-light btn-details">Ver Detalhes</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- Controles -->
@@ -181,8 +243,6 @@
             <span class="carousel-control-next-icon"></span>
         </button>
     </div>
-
-
 
 
     <!-- SOBRE NÓS -->
