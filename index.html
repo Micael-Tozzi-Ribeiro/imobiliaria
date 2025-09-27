@@ -1,31 +1,25 @@
-<!doctype html>
-<html lang="pt-BR" data-bs-theme="auto">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Falcão Imóveis - Home</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
-        rel="stylesheet">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>José Marcato - Cursos</title>
+    <link rel="stylesheet" href="CSS/index.css" />
     <!-- Font Awesome CDN para ícones sociais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Google Fonts: Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/logo-r.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="IMG/logo-r.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="IMG/logo-r.png">
 </head>
 
 <body>
+
+
+
 
     <!-- Cabeçalho -->
     <header>
@@ -34,87 +28,62 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="imoveis.html" class="ativo">Imóveis</a></li>
-                <li><a href="../index.html">Contato</a></li>
+                <li><a href="index.html" class="ativo">Início</a></li>
+                <li><a href="HTML/sobre.html">Sobre Nós</a></li>
+                <li><a href="HTML/imoveis.html">Imóveis</a></li>
+                <li><a href="HTML/contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
-
-
-    <main>
-
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <!-- Banner -->
+    <section class="banner">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/house-1867187_640.jpg" alt="Banner Cursos Técnicos">
+        <div class="banner-texto">
+            <h2>Conheça nossos imóveis</h2>
+            <a href="HTML/imoveis.html"class="btn-imoveis">Ver imóveis</a>
         </div>
+    </section>
 
-        <!-- ===== Seção Sobre Nós ===== -->
-        <section id="sobre-nos">
-            <div class="sobre-container">
-                <!-- Foto do fundador -->
-                <div class="sobre-foto">
-                    <img src="IMG/imobi-removebg-preview.png" alt="Fundador da Falcão Imóveis">
+
+
+    <!-- Conteúdo -->
+    <main>
+        <main>
+            <!-- ===== Sobre Nós ===== -->
+                <div class="sobre-container">
+                    <!-- Foto circular -->
+                    <div class="sobre-foto">
+                        <img src="../IMG/imobi-removebg-preview.png" alt="Fundador da Falcão Imóveis">
+                    </div>
+
+                    <!-- Texto -->
+                    <div class="sobre-texto">
+                        <h2>Sobre Nós</h2>
+                        <p>
+                            Com mais de <strong>15 anos de experiência</strong> no mercado imobiliário, a Falcão Imóveis
+                            se destaca por oferecer um atendimento personalizado, profissionalismo e compromisso com
+                            a satisfação de nossos clientes.
+                        </p>
+                        <p>
+                            Nossa equipe é especializada em encontrar o imóvel perfeito para cada perfil, desde casas
+                            de campo e praias até imóveis de luxo em regiões exclusivas. Trabalhamos para transformar
+                            o sonho da casa própria em realidade, com transparência e confiança.
+                        </p>
+                    </div>
                 </div>
 
-                <!-- Texto -->
-                <div class="sobre-texto">
-                    <h2>Sobre Nós</h2>
-                    <p>
-                        Com mais de <strong>15 anos de experiência</strong> no mercado imobiliário, a Falcão Imóveis
-                        se destaca por oferecer um atendimento personalizado, profissionalismo e compromisso com
-                        a satisfação de nossos clientes.
-                    </p>
-                    <p>
-                        Nossa equipe é especializada em encontrar o imóvel perfeito para cada perfil, desde casas
-                        de campo e praias até imóveis de luxo em regiões exclusivas. Trabalhamos para transformar
-                        o sonho da casa própria em realidade, com transparência e confiança.
-                    </p>
+            <!-- ===== Contato Rápido ===== -->
+                <div class="contato-container">
+                    <h2>Contato Rápido</h2>
+                    <p>Preencha o formulário abaixo e entraremos em contato com você o mais rápido possível.</p>
+                    <form id="form-contato">
+                        <input type="text" name="nome" placeholder="Seu nome" required>
+                        <input type="email" name="email" placeholder="Seu e-mail" required>
+                        <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
                 </div>
-            </div>
-        </section>
-
-        <!-- ===== Seção Contato Rápido ===== -->
-        <section id="contato-rapido">
-            <div class="contato-container">
-                <h2>Contato Rápido</h2>
-                <p>Preencha o formulário abaixo e entraremos em contato com você o mais rápido possível.</p>
-                <form id="form-contato">
-                    <input type="text" name="nome" placeholder="Seu nome" required>
-                    <input type="email" name="email" placeholder="Seu e-mail" required>
-                    <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
-                    <button type="submit">Enviar Mensagem</button>
-                </form>
-            </div>
-        </section>
+        </main>
 
     </main>
 
@@ -161,67 +130,9 @@
         </div>
     </footer>
 
-
 </body>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    // Atualiza ano (checa se o elemento existe)
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    // Dark mode toggle
-    const themeToggleButtons = document.querySelectorAll('[data-bs-theme-value]');
-    const themeIconUse = document.querySelector('.theme-icon-active use');
-
-    const icons = {
-        light: "#sun-fill",
-        dark: "#moon-stars-fill",
-        auto: "#circle-half"
-    };
-
-    function setTheme(theme) {
-        document.documentElement.setAttribute('data-bs-theme', theme);
-
-        themeToggleButtons.forEach(btn => {
-            const svgCheck = btn.querySelector('svg.ms-auto');
-            if (svgCheck) svgCheck.classList.add('d-none');
-        });
-
-        const activeCheck = document.querySelector(`[data-bs-theme-value="${theme}"] svg.ms-auto`);
-        if (activeCheck) activeCheck.classList.remove('d-none');
-
-        if (themeIconUse) {
-            // tenta setar href normalmente; se der problema usa namespace antigo
-            try {
-                themeIconUse.setAttribute('href', icons[theme]);
-            } catch (e) {
-                themeIconUse.setAttributeNS('http://www.w3.org/1999/xlink', 'href', icons[theme]);
-            }
-        }
-    }
-
-    // Inicializa
-    const currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'auto';
-    setTheme(currentTheme);
-
-    themeToggleButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const theme = btn.getAttribute('data-bs-theme-value');
-            setTheme(theme);
-        });
-    });
-
-    // Inicializa carousel automático (checa elemento)
-    const carouselElement = document.querySelector('#mainCarousel');
-    if (carouselElement && window.bootstrap && bootstrap.Carousel) {
-        new bootstrap.Carousel(carouselElement, {
-            interval: 5000
-        });
-    }
+<script src="../JS/imoveis.js">
 </script>
-
 
 </html>

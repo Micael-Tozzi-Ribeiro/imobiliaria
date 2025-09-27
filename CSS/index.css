@@ -7,81 +7,19 @@
 
 html,
 body {
-    overflow-x: hidden;  
+    overflow-x: hidden;
     scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
     background-color: #222;
     color: #fff;
     line-height: 1.6;
-    padding-top: 100px; /* espaço para o header fixo */
+    padding-top: 84px; /* espaço para o header fixo */
 }
 
-/* ===== Faixa Superior com Logos ===== */
-.top-bar {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px 20px;
-    border-bottom: 2px solid #1E90FF;
-}
-
-.top-bar .logo-container img {
-    height: 50px;
-    max-width: 100%;
-    margin-top: 30px;
-}
-
-.social-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-shrink: 0;
-}
-
-.social-icons a {
-    color: #1E90FF;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    color: #fff;
-}
-
-/* ===== Faixa com o nome da escola ===== */
-.top-bar-name {
-    background-color: #222;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    padding: 8px 30px;
-    font-weight: 600;
-    font-size: 1rem;
-    border-bottom: 3px solid #1E90FF;
-    position: relative;
-    min-height: 60px;
-}
-
-.school-name {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-}
-
-.school-name p {
-    margin: 0;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-}
-
-/* ===== Cabeçalho fixo ===== */
+/* ===== Cabeçalho ===== */
 header {
     position: fixed;
     top: 0;
@@ -104,33 +42,33 @@ header nav {
     gap: 30px;
 }
 
-/* Logo no canto esquerdo */
+main {
+    margin: 160px auto 40px auto;
+}
+
 header .logo-container img {
     height: 60px;
-    max-width: 100%;
     display: block;
     margin-left: 20px;
     margin-top: 10px;
 }
 
-/* ===== Menu de Navegação ===== */
+/* Menu de Navegação */
 nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
-    margin-left: -40px;
     justify-content: center;
     flex: 1;
 }
 
 nav ul li a {
-    font-family: 'Montserrat', sans-serif;
-    color: #000;
-    text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
     padding: 10px 16px;
     border-radius: 4px;
+    text-decoration: none;
+    color: #000;
     position: relative;
     transition: color 0.3s;
 }
@@ -153,9 +91,175 @@ nav ul li a.ativo::after {
 
 nav ul li a:hover,
 nav ul li a.ativo {
-    background-color: transparent;
     color: #000;
 }
+
+/* ===== Banner ===== */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.banner-texto h2 {
+    font-size: 3rem;
+    color: #1E90FF;
+    margin-bottom: 20px;
+}
+
+.banner-texto button {
+    padding: 14px 30px;
+    background-color: #1E90FF;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.banner-texto button:hover {
+    background-color: #16375a;
+}
+
+/* ===== Sobre Nós ===== */
+.sobre-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 100px 40px;
+    width: 100%;
+}
+
+.sobre-foto {
+    flex: 0 0 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #444;
+}
+
+.sobre-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre-texto {
+    flex: 1;
+    min-width: 400px;
+}
+
+.sobre-texto h2 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    color: #1E90FF;
+}
+
+.sobre-texto p {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+/* ===== Contato Rápido ===== */
+.contato-container {
+    padding: 100px 40px;
+    color: #eee;
+    text-align: center;
+    width: 100%;
+}
+
+.contato-container h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #1E90FF;
+}
+
+.contato-container p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+#form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#form-contato input,
+#form-contato textarea {
+    padding: 15px 18px;
+    font-size: 1.1rem;
+    border: 1px solid #555;
+    border-radius: 10px;
+    resize: none;
+    background-color: #333;
+    color: #fff;
+}
+
+#form-contato input:focus,
+#form-contato textarea:focus {
+    outline: none;
+    border-color: #1E90FF;
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
+}
+
+#form-contato button {
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    background-color: #1E90FF;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#form-contato button:hover {
+    background-color: #16375a;
+}
+
+a.btn-imoveis {
+    display: inline-block;
+    padding: 14px 30px;        /* tamanho do botão */
+    background-color: #1E90FF;  /* azul vibrante */
+    color: #fff;                /* texto branco */
+    font-size: 1.2rem;          /* tamanho da fonte */
+    font-weight: 600;
+    text-decoration: none;      /* remove sublinhado do link */
+    border-radius: 10px;        /* cantos arredondados */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* sombra suave */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+a.btn-imoveis:hover {
+    background-color: #16375a;  /* azul escuro ao passar o mouse */
+    transform: translateY(-2px); /* efeito de “levitar” */
+}
+
 
 /* ===== Rodapé ===== */
 footer {
@@ -236,225 +340,45 @@ footer .social-icons a:hover span {
   color: #fff;
 }
 
-/* ===== MAIN ===== */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px 80px; /* espaço extra inferior */
-}
 
-/* ===== CAROUSEL ===== */
-#carousel-section {
-    padding: 40px 0;
-}
-
-.carousel {
-    min-height: 65vh;
-    background-color: #f8f9fa; /* fundo claro para contraste */
-}
-
-.carousel-inner {
-    min-height: 65vh;
-}
-
-.carousel-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 65vh;
-    overflow: hidden;
-}
-
-.slide-inner {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-}
-
-.slide-image {
-    flex: 1 1 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slide-image .img-frame {
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
-    width: 100%;
-    max-width: 560px;
-}
-
-.slide-image .img-frame img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.slide-info {
-    flex: 1 1 45%;
-    min-width: 320px;
-    background: #fff;
-    color: #222;
-    padding: 2rem;
-    border-radius: 14px;
-    box-shadow: 0 12px 36px rgba(10, 14, 40, 0.25);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.slide-info h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-}
-
-.slide-info p.lead {
-    color: #444;
-    margin-bottom: 1rem;
-    line-height: 1.45;
-}
-
-.btn-details {
-    background: #1E90FF;
-    color: #fff;
-    border-radius: 8px;
-    padding: 0.6rem 1.1rem;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn-details:hover {
-    background: #16375a;
-}
-
-/* Responsivo carousel */
+/* ===== Responsividade ===== */
 @media (max-width: 768px) {
-    .slide-inner {
+    .sobre-container {
         flex-direction: column;
         text-align: center;
-        gap: 1.5rem;
+        padding: 60px 20px;
     }
-    .slide-info {
-        padding: 1.2rem;
+
+    .sobre-foto {
+        flex: 0 0 250px;
+        height: 250px;
     }
-}
 
-/* ===== SOBRE NÓS ===== */
-#sobre-nos {
-    padding: 60px 20px;
-    background-color: #f8f9fa;
-    color: #222;
-}
+    .sobre-texto h2 {
+        font-size: 2.2rem;
+    }
 
-.sobre-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 40px;
-}
+    .sobre-texto p,
+    .contato-container p {
+        font-size: 1.1rem;
+    }
 
-.sobre-foto {
-    flex: 0 0 250px;
-    height: 250px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #ccc;
-}
+    .contato-container h2 {
+        font-size: 2.2rem;
+    }
 
-.sobre-foto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-left: 0;
+    }
 
-.sobre-texto {
-    flex: 1;
-    min-width: 300px;
-}
+    .banner-texto h2 {
+        font-size: 2rem;
+    }
 
-.sobre-texto h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.sobre-texto p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* ===== CONTATO RÁPIDO ===== */
-#contato-rapido {
-    padding: 60px 20px;
-    background-color: #fff;
-    color: #222;
-    text-align: center;
-}
-
-#contato-rapido h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-#contato-rapido p {
-    font-size: 1rem;
-    margin-bottom: 30px;
-}
-
-.contato-container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#form-contato {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-#form-contato input,
-#form-contato textarea {
-    padding: 12px 15px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    resize: none;
-}
-
-#form-contato input:focus,
-#form-contato textarea:focus {
-    outline: none;
-    border-color: #1E90FF;
-    box-shadow: 0 0 5px rgba(11, 35, 64, 0.3);
-}
-
-#form-contato button {
-    padding: 12px 20px;
-    font-size: 1rem;
-    background-color: #1E90FF;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#form-contato button:hover {
-    background-color: #16375a;
+    .banner-texto button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
 }

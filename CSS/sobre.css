@@ -14,11 +14,9 @@ body {
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #222;
-    color: #eee;
-    /* cor clara para fundo escuro */
-    line-height: 1.7;
-    padding-top: 84px;
-    /* espaço para o header fixo */
+    color: #eee; /* cor clara para fundo escuro */
+    line-height: 1.8;
+    padding-top: 84px; /* espaço para o header fixo */
 }
 
 /* ===== Faixa Superior com Logos ===== */
@@ -106,7 +104,6 @@ header nav {
     gap: 30px;
 }
 
-/* Logo no canto esquerdo */
 header .logo-container img {
     height: 60px;
     max-width: 100%;
@@ -121,7 +118,6 @@ nav ul {
     display: flex;
     gap: 30px;
     margin-left: -40px;
-    /* leve ajuste p/ centralizar melhor */
     justify-content: center;
     flex: 1;
 }
@@ -211,7 +207,6 @@ footer .copyright {
     text-align: center;
 }
 
-/* Redes sociais */
 footer .social-icons {
     display: grid;
     grid-template-columns: 30px auto;
@@ -239,106 +234,87 @@ footer .social-icons a:hover span {
     color: #fff;
 }
 
-/* ===== Seção Sobre Nós ===== */
-.sobre-nos {
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 0 2rem;
-    font-family: 'Montserrat', sans-serif;
+/* ===== Conteúdo Principal ===== */
+main {
+    max-width: 1400px;
+    margin: 5rem auto;
+    padding: 0 3rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 4rem;
 }
 
-/* Seções simples, ocupando mais espaço */
-.sobre-nos section {
-    width: 100%;
-    padding: 2rem 0;
-}
-
-.sobre-nos h2 {
-    font-size: 2rem;
+/* Títulos gerais */
+main h2 {
+    font-size: 2.8rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     color: #1E90FF;
 }
 
-/* Texto e listas ocupando mais largura */
-.sobre-nos p,
-.sobre-nos li {
-    font-size: 1.15rem;
-    line-height: 1.9;
-    max-width: 900px;
-}
-
-.sobre-nos ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 1rem;
-}
-
-.sobre-nos ul li {
-    margin: 0.8rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.sobre-nos ul li i {
-    color: #1E90FF;
+/* Texto geral */
+main p,
+main li {
     font-size: 1.3rem;
+    line-height: 2;
 }
 
 /* Quem é o Falcão */
-
 .falcao-container {
     display: flex;
     align-items: center;
-    /* centraliza verticalmente em relação à imagem */
-    gap: 2rem;
+    gap: 3rem;
     flex-wrap: wrap;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
-
 .falcao-img img {
-    width: 250px;
-    height: 250px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid #0b2340;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
 }
 
 .falcao-texto {
     flex: 1;
-    min-width: 300px;
+    min-width: 400px;
+    font-size: 1.3rem;
+    line-height: 2;
 }
 
-/* Nossa História - layout com imagem ao lado do texto */
+/* Nossa História */
 .historia-container {
     display: flex;
-    align-items: flex-start;
-    gap: 2.5rem;
+    align-items: center; /* alinha verticalmente o texto ao centro da imagem */
+    gap: 3rem;
     flex-wrap: wrap;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .historia-container .historia-img img {
-    width: 300px;
-    height: 200px;
+    width: 380px;
+    height: 260px;
     object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
 }
 
 .historia-container .historia-texto {
     flex: 1;
-    min-width: 300px;
+    min-width: 450px;
+    font-size: 1.3rem;
+    line-height: 2;
 }
 
-/* Responsivo: empilha a imagem em telas pequenas */
-@media (max-width: 768px) {
+/* Responsivo */
+@media (max-width: 1024px) {
+    .falcao-img img {
+        width: 280px;
+        height: 280px;
+    }
+
     .historia-container {
         flex-direction: column;
         align-items: center;
@@ -348,5 +324,21 @@ footer .social-icons a:hover span {
     .historia-container .historia-img img {
         width: 80%;
         height: auto;
+    }
+
+    .historia-container .historia-texto {
+        min-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .falcao-texto,
+    .historia-container .historia-texto {
+        font-size: 1.15rem;
+    }
+
+    main {
+        padding: 0 2rem;
+        gap: 3rem;
     }
 }
