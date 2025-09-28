@@ -142,3 +142,69 @@ limparBtn.addEventListener("click", () => {
 
 // Inicializar contador
 updateGallery();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modalContato");
+  const fecharModal = document.getElementById("fecharModal");
+  const btnWhatsApp = document.getElementById("btnWhatsApp");
+  const btnEmail = document.getElementById("btnEmail");
+  const formEmail = document.getElementById("formEmail");
+  const msgEmail = document.getElementById("msgEmail");
+
+  const modalImg = document.getElementById("modal-img");
+  const modalTitulo = document.getElementById("modal-titulo");
+  const modalEndereco = document.getElementById("modal-endereco");
+  const modalPreco = document.getElementById("modal-preco");
+
+  // Seleciona todos os botões de contato
+  document.querySelectorAll(".btn-detalhes").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Sobe até o card-imovel
+      const card = btn.closest(".card-imovel");
+      const imgSrc = card.querySelector(".carousel-img").src;
+      const titulo = card.querySelector("h3").innerText;
+      const endereco = card.querySelector(".localizacao").innerText;
+      const preco = card.querySelector(".preco").innerText;
+
+      // Preenche o modal
+      modalImg.src = imgSrc;
+      modalTitulo.innerText = titulo;
+      modalEndereco.innerText = endereco;
+      modalPreco.innerText = preco;
+
+      // Preenche mensagem padrão no form
+      msgEmail.value = `Olá, tenho interesse no imóvel "${titulo}" localizado em ${endereco}. Poderia me enviar mais informações?`;
+
+      // Exibe modal
+      modal.style.display = "flex";
+
+      // Botão WhatsApp com mensagem dinâmica
+      btnWhatsApp.onclick = () => {
+        const msg = encodeURIComponent(`Olá, tenho interesse no imóvel "${titulo}" localizado em ${endereco}.`);
+        window.open(`https://wa.me/551140481353?text=${msg}`, "_blank");
+      };
+
+      // Mostrar form de email
+      btnEmail.onclick = () => {
+        formEmail.style.display = "flex";
+      };
+    });
+  });
+
+  // Fechar modal
+  fecharModal.onclick = () => {
+    modal.style.display = "none";
+    formEmail.style.display = "none"; // esconde form ao fechar
+  };
+
+  // Fechar se clicar fora da caixa
+  window.onclick = (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      formEmail.style.display = "none";
+    }
+  };
+});

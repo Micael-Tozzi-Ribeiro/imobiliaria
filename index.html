@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>José Marcato - Cursos</title>
+    <title>Falcão Imóveis - Inicio</title>
     <link rel="stylesheet" href="CSS/index.css" />
     <!-- Font Awesome CDN para ícones sociais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Google Fonts: Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="IMG/logo-r.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="IMG/logo-r.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="IMG/logo-r.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/icon-bg.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="IMG/icon-bg.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="IMG/icon-bg.png">
 </head>
 
 <body>
@@ -40,7 +40,7 @@
         <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/house-1867187_640.jpg" alt="Banner Cursos Técnicos">
         <div class="banner-texto">
             <h2>Conheça nossos imóveis</h2>
-            <a href="HTML/imoveis.html"class="btn-imoveis">Ver imóveis</a>
+            <a href="HTML/imoveis.html" class="btn-imoveis">Ver imóveis</a>
         </div>
     </section>
 
@@ -50,39 +50,46 @@
     <main>
         <main>
             <!-- ===== Sobre Nós ===== -->
-                <div class="sobre-container">
-                    <!-- Foto circular -->
-                    <div class="sobre-foto">
-                        <img src="../IMG/imobi-removebg-preview.png" alt="Fundador da Falcão Imóveis">
-                    </div>
-
-                    <!-- Texto -->
-                    <div class="sobre-texto">
-                        <h2>Sobre Nós</h2>
-                        <p>
-                            Com mais de <strong>15 anos de experiência</strong> no mercado imobiliário, a Falcão Imóveis
-                            se destaca por oferecer um atendimento personalizado, profissionalismo e compromisso com
-                            a satisfação de nossos clientes.
-                        </p>
-                        <p>
-                            Nossa equipe é especializada em encontrar o imóvel perfeito para cada perfil, desde casas
-                            de campo e praias até imóveis de luxo em regiões exclusivas. Trabalhamos para transformar
-                            o sonho da casa própria em realidade, com transparência e confiança.
-                        </p>
-                    </div>
+            <div class="sobre-container">
+                <!-- Foto circular -->
+                <div class="sobre-foto">
+                    <img src="../IMG/imobi-removebg-preview.png" alt="Fundador da Falcão Imóveis">
                 </div>
+
+                <!-- Texto -->
+                <div class="sobre-texto">
+                    <h2>Sobre Nós</h2>
+                    <p>
+                        Com mais de <strong>15 anos de experiência</strong> no mercado imobiliário, a Falcão Imóveis
+                        se destaca por oferecer um atendimento personalizado, profissionalismo e compromisso com
+                        a satisfação de nossos clientes.
+                    </p>
+                    <p>
+                        Nossa equipe é especializada em encontrar o imóvel perfeito para cada perfil, desde casas
+                        de campo e praias até imóveis de luxo em regiões exclusivas. Trabalhamos para transformar
+                        o sonho da casa própria em realidade, com transparência e confiança.
+                    </p>
+                </div>
+            </div>
 
             <!-- ===== Contato Rápido ===== -->
-                <div class="contato-container">
-                    <h2>Contato Rápido</h2>
-                    <p>Preencha o formulário abaixo e entraremos em contato com você o mais rápido possível.</p>
-                    <form id="form-contato">
-                        <input type="text" name="nome" placeholder="Seu nome" required>
-                        <input type="email" name="email" placeholder="Seu e-mail" required>
-                        <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
-                        <button type="submit">Enviar Mensagem</button>
-                    </form>
-                </div>
+            <div class="contato-container">
+                <h2>Contato Rápido</h2>
+                <p>Preencha o formulário abaixo e entraremos em contato com você o mais rápido possível.</p>
+                <form id="form-contato" action="https://formsubmit.co/micael.tozzi.ribeiro@gmail.com" method="POST">
+                    <!-- Ocultos do FormSubmit -->
+                    <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+                    <!-- página de obrigado -->
+                    <input type="hidden" name="_captcha" value="false"> <!-- desativa captcha -->
+                    <input type="hidden" name="_template" value="box"> <!-- layout do email -->
+
+                    <input type="text" name="nome" placeholder="Seu nome" required>
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+
+            </div>
         </main>
 
     </main>

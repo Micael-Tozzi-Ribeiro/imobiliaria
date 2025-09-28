@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>José Marcato - Cursos</title>
+    <title>Falcão Imóveis - Imóveis</title>
     <link rel="stylesheet" href="../CSS/imoveis.css" />
     <!-- Font Awesome CDN para ícones sociais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Google Fonts: Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../IMAGENS/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../IMAGENS/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../IMAGENS/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../IMG/icon-bg.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../IMG/icon-bg.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../IMG/icon-bg.png">
 </head>
 
 <body>
@@ -144,7 +144,7 @@
                 </div>
                 <p class="descricao">Apartamento moderno e bem localizado, ideal para famílias pequenas e comodidade
                     urbana.</p>
-                <a href="#detalhes" class="btn-detalhes">Ver Detalhes</a>
+                <a href="#detalhes" class="btn-detalhes">Entrar em contato</a>
             </div>
         </article>
 
@@ -183,7 +183,7 @@
                 </div>
                 <p class="descricao">Sítio aconchegante, perfeito para quem busca tranquilidade e contato com a
                     natureza, Venha ver pessoalmente!</p>
-                <a href="#detalhes" class="btn-detalhes">Ver Detalhes</a>
+                <a href="#detalhes" class="btn-detalhes">Entrar em contato</a>
             </div>
         </article>
 
@@ -223,7 +223,7 @@
                 <p class="descricao">Apartamento com vista para o mar, ideal para quem gosta de praias e lazer urbano,
                     Venha ver pessoalmente!
                 </p>
-                <a href="#detalhes" class="btn-detalhes">Ver Detalhes</a>
+                <a href="#detalhes" class="btn-detalhes">Entrar em contato</a>
             </div>
         </article>
 
@@ -262,7 +262,7 @@
                 </div>
                 <p class="descricao">Casa moderna com design sofisticado, ideal para famílias que buscam conforto e
                     estilo, Venha ver pessoalmente!</p>
-                <a href="#detalhes" class="btn-detalhes">Ver Detalhes</a>
+                <a href="#detalhes" class="btn-detalhes">Entrar em contato</a>
             </div>
         </article>
 
@@ -301,9 +301,41 @@
                 </div>
                 <p class="descricao">Chácara ideal para quem busca tranquilidade e contato com a natureza, Venha ver
                     pessoalmente!</p>
-                <a href="#detalhes" class="btn-detalhes">Ver Detalhes</a>
+                <a href="#detalhes" class="btn-detalhes">Entrar em contato</a>
             </div>
         </article>
+
+        <!-- Modal de Contato -->
+        <div class="modal-contato" id="modalContato">
+            <div class="modal-content">
+                <span class="close-modal" id="fecharModal">&times;</span>
+
+                <div class="modal-info">
+                    <img id="modal-img" src="" alt="Imagem do Imóvel">
+                    <div>
+                        <h3 id="modal-titulo"></h3>
+                        <p id="modal-endereco"></p>
+                        <p id="modal-preco"></p>
+                    </div>
+                </div>
+
+                <div class="modal-acoes">
+                    <button id="btnWhatsApp">WhatsApp</button>
+                    <button id="btnEmail">E-mail</button>
+                </div>
+
+                <!-- Form de E-mail escondido por padrão -->
+                <form id="formEmail" style="display:none;" action="https://formsubmit.co/SEU-EMAIL-AQUI" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="text" name="nome" placeholder="Seu nome" required>
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <textarea name="mensagem" id="msgEmail" rows="5" required></textarea>
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+
 
     </main>
 
