@@ -341,12 +341,12 @@ footer .social-icons a:hover span {
 }
 
 
-/* ===== Responsividade Mobile Reforçada ===== */
+/* ===== Responsividade Mobile Reforçada - Ajustes Banner e Footer ===== */
 @media (max-width: 768px) {
 
     /* Header */
     header {
-        padding: 8px 15px;
+        padding: 10px 15px;
     }
 
     header nav {
@@ -374,30 +374,34 @@ footer .social-icons a:hover span {
 
     /* Banner */
     .banner {
-        height: 250px !important;
+        height: 320px !important; /* aumentado para melhor visualização da imagem */
     }
 
-    .banner-texto h2 {
-        font-size: 1.8rem !important;
+    .banner-texto {
+        top: 50%;
+        transform: translate(-50%, -50%);
         padding: 0 10px;
     }
 
+    .banner-texto h2 {
+        font-size: 2rem !important;
+    }
+
     .banner-texto button {
-        font-size: 0.95rem !important;
-        padding: 10px 16px;
+        font-size: 1rem !important;
+        padding: 12px 20px;
     }
 
     /* Sobre Nós */
     .sobre-container {
         flex-direction: column !important;
         text-align: center;
-        padding: 40px 15px !important;
+        padding: 50px 15px !important;
     }
 
     .sobre-foto {
-        flex: 0 0 auto !important;
-        width: 180px !important;
-        height: 180px !important;
+        width: 200px !important;
+        height: 200px !important;
         margin: 0 auto 20px auto;
     }
 
@@ -417,7 +421,7 @@ footer .social-icons a:hover span {
 
     /* Contato Rápido */
     .contato-container {
-        padding: 50px 15px !important;
+        padding: 60px 15px !important;
     }
 
     .contato-container h2 {
@@ -445,21 +449,25 @@ footer .social-icons a:hover span {
         padding: 10px 18px !important;
     }
 
-    /* Rodapé */
+    /* Footer centralizado */
     footer {
         flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
         text-align: center !important;
-        padding: 20px 10px !important;
-        gap: 15px !important;
+        padding: 30px 15px !important;
+        gap: 20px !important;
     }
 
     footer .footer-item {
         width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
         text-align: center !important;
     }
 
     footer .footer-item h4 {
-        font-size: 1.1rem !important;
+        font-size: 1.2rem !important;
     }
 
     footer .footer-item p,
@@ -469,26 +477,27 @@ footer .social-icons a:hover span {
 
     footer .social-icons {
         justify-content: center !important;
+        margin-top: 10px;
     }
 }
 
 /* Telas muito pequenas, <480px */
 @media (max-width: 480px) {
     .banner {
-        height: 200px !important;
+        height: 280px !important; /* um pouco maior para celular pequeno */
     }
 
     .banner-texto h2 {
-        font-size: 1.4rem !important;
+        font-size: 1.6rem !important;
     }
 
     .sobre-foto {
-        width: 140px !important;
-        height: 140px !important;
+        width: 160px !important;
+        height: 160px !important;
     }
 
     .sobre-texto h2 {
-        font-size: 1.5rem !important;
+        font-size: 1.6rem !important;
     }
 
     .sobre-texto p,
