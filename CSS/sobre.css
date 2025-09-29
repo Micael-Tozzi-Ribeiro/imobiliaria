@@ -339,6 +339,7 @@ main li {
     main {
         padding: 0 2rem;
         gap: 3rem;
+        margin-top: 190px;
     }
 
     /* Header */

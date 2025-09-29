@@ -343,15 +343,6 @@ footer .social-icons a:hover span {
 
 /* ===== Responsividade Mobile Ajustada - Header intacto ===== */
 
-/* Responsivo */
-@media (max-width: 1024px) {
-    .sobre-foto img {
-        width: 280px;
-        height: 280px;
-    }
-}
-
-
 /* Telas pequenas até 768px */
 @media (max-width: 768px) {
 
