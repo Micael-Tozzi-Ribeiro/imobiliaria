@@ -341,14 +341,14 @@ footer .social-icons a:hover span {
 }
 
 
-/* ===== Responsividade Mobile Ajustada ===== */
+/* ===== Responsividade Mobile Ajustada - Header intacto ===== */
 
 /* Telas pequenas até 768px */
 @media (max-width: 768px) {
 
-    /* Banner maior e texto visível */
+    /* Banner */
     .banner {
-        height: 450px !important; /* aumenta ainda mais a altura do banner */
+        height: 400px !important; /* mantém o tamanho que você aprovou */
     }
 
     .banner-texto {
@@ -358,7 +358,7 @@ footer .social-icons a:hover span {
     }
 
     .banner-texto h2 {
-        font-size: 2rem !important;
+        font-size: 2.2rem !important;
         line-height: 1.2 !important;
     }
 
@@ -367,7 +367,7 @@ footer .social-icons a:hover span {
         padding: 12px 20px;
     }
 
-    /* Sobre Nós */
+    /* Sobre Nós - imagem circular perfeita */
     .sobre-container {
         flex-direction: column !important;
         text-align: center;
@@ -375,9 +375,10 @@ footer .social-icons a:hover span {
     }
 
     .sobre-foto {
-        width: 150px !important;   /* reduzimos para evitar distorção */
-        height: 150px !important;  /* largura = altura */
-        border-radius: 50% !important; /* garante círculo perfeito */
+        width: 140px !important;   /* largura = altura */
+        height: 140px !important;  /* largura = altura */
+        border-radius: 50% !important; /* círculo perfeito */
+        flex: none !important;     /* remove interferência do flex */
         margin: 0 auto 20px auto;
     }
 
@@ -462,12 +463,11 @@ footer .social-icons a:hover span {
 
     /* Banner */
     .banner {
-        height: 380px !important; /* altura proporcional ao celular */
+        height: 380px !important;
     }
 
     .banner-texto h2 {
-        font-size: 1.6rem !important;
-        line-height: 1.2 !important;
+        font-size: 1.8rem !important;
     }
 
     .banner-texto button {
@@ -475,11 +475,12 @@ footer .social-icons a:hover span {
         padding: 10px 16px;
     }
 
-    /* Sobre Nós */
+    /* Sobre Nós - imagem circular perfeita */
     .sobre-foto {
-        width: 130px !important;   /* imagem menor para celular pequeno */
-        height: 130px !important;  /* mantém círculo */
+        width: 120px !important;   /* reduz um pouco para celular pequeno */
+        height: 120px !important;
         border-radius: 50% !important;
+        flex: none !important;
         margin: 0 auto 15px auto;
     }
 
