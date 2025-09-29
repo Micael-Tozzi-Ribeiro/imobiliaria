@@ -346,6 +346,34 @@ footer .social-icons a:hover span {
 /* Telas pequenas até 768px */
 @media (max-width: 768px) {
 
+    /* Header */
+    header {
+        padding: 10px 15px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    header .logo-container img {
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
     /* Banner */
     .banner {
         height: 400px !important; /* mantém o tamanho que você aprovou */
@@ -375,8 +403,8 @@ footer .social-icons a:hover span {
     }
 
     .sobre-foto {
-        width: 140px !important;   /* largura = altura */
-        height: 140px !important;  /* largura = altura */
+        width: 200px !important;   /* largura = altura */
+        height: 200px !important;  /* largura = altura */
         border-radius: 50% !important; /* círculo perfeito */
         flex: none !important;     /* remove interferência do flex */
         margin: 0 auto 20px auto;
