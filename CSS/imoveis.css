@@ -879,3 +879,38 @@ footer .social-icons a:hover span {
     padding: 8px;
   }
 }
+
+/* Até 768px (tablet e celular médio) */
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column; /* imagem em cima, infos abaixo */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .modal-info img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .modal-info h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .modal-info p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .modal-acoes {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-acoes button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
