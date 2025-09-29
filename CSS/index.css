@@ -341,7 +341,9 @@ footer .social-icons a:hover span {
 }
 
 
-/* ===== Responsividade Mobile Reforçada - Ajustes Banner e Footer ===== */
+/* ===== Responsividade Mobile Completa ===== */
+
+/* Telas pequenas até 768px */
 @media (max-width: 768px) {
 
     /* Header */
@@ -374,7 +376,7 @@ footer .social-icons a:hover span {
 
     /* Banner */
     .banner {
-        height: 320px !important; /* aumentado para melhor visualização da imagem */
+        height: 400px !important; /* banner maior */
     }
 
     .banner-texto {
@@ -384,7 +386,7 @@ footer .social-icons a:hover span {
     }
 
     .banner-texto h2 {
-        font-size: 2rem !important;
+        font-size: 2.2rem !important;
     }
 
     .banner-texto button {
@@ -400,8 +402,9 @@ footer .social-icons a:hover span {
     }
 
     .sobre-foto {
-        width: 200px !important;
-        height: 200px !important;
+        width: 180px !important;
+        height: 180px !important;
+        border-radius: 50% !important; /* garante círculo */
         margin: 0 auto 20px auto;
     }
 
@@ -481,26 +484,44 @@ footer .social-icons a:hover span {
     }
 }
 
-/* Telas muito pequenas, <480px */
+/* Telas muito pequenas, até 480px */
 @media (max-width: 480px) {
+
+    /* Banner */
     .banner {
-        height: 280px !important; /* um pouco maior para celular pequeno */
+        height: 350px !important; /* banner ainda maior para celular pequeno */
     }
 
     .banner-texto h2 {
-        font-size: 1.6rem !important;
+        font-size: 1.8rem !important;
     }
 
+    .banner-texto button {
+        font-size: 0.95rem !important;
+        padding: 10px 16px;
+    }
+
+    /* Sobre Nós */
     .sobre-foto {
         width: 160px !important;
         height: 160px !important;
+        border-radius: 50% !important;
+        margin: 0 auto 15px auto;
     }
 
     .sobre-texto h2 {
         font-size: 1.6rem !important;
     }
 
-    .sobre-texto p,
+    .sobre-texto p {
+        font-size: 0.9rem !important;
+    }
+
+    /* Contato Rápido */
+    .contato-container h2 {
+        font-size: 1.6rem !important;
+    }
+
     .contato-container p {
         font-size: 0.9rem !important;
     }
@@ -511,5 +532,15 @@ footer .social-icons a:hover span {
     a.btn-imoveis {
         font-size: 0.9rem !important;
         padding: 8px 12px !important;
+    }
+
+    /* Footer */
+    footer {
+        padding: 25px 10px !important;
+        gap: 15px !important;
+    }
+
+    footer .footer-item {
+        max-width: 100% !important;
     }
 }
