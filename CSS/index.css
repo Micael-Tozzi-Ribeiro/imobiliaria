@@ -343,10 +343,37 @@ footer .social-icons a:hover span {
 
 /* ===== Responsividade Mobile Ajustada - Header intacto ===== */
 
-/* ===== Responsividade Mobile Ajustada - Header original ===== */
-
 /* Telas pequenas até 768px */
 @media (max-width: 768px) {
+
+    /* Header */
+    header {
+        padding: 8px 15px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    header .logo-container img {
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
 
     /* Banner */
     .banner {
