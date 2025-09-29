@@ -725,8 +725,8 @@ footer .social-icons a:hover span {
 /* Telas pequenas até 768px */
 @media (max-width: 768px) {
 
-  main {
-    margin-top: 190px;
+  .banner {
+    margin-top: 200px;
   }
 
     /* Header */
