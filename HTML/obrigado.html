@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Falcão Imóveis - Formulário Enviado</title>
+
+  <!-- Fonte e Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../IMG/icon-bg.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../IMG/icon-bg.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../IMG/icon-bg.png">
+
+  <style>
+    /* Reset rápido */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #222;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .thanks-box {
+      max-width: 700px;
+      width: 100%;
+      background: #2d2d2d;
+      /* aumentei um pouco o padding-top para dar espaço à back-btn absoluta */
+      padding: 64px 34px 50px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      position: relative;
+      /* necessário para posicionamento absoluto do botão */
+    }
+
+    /* botão ícone no canto superior esquerdo da thanks-box */
+    .back-btn {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.03);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: background 0.18s, transform 0.12s;
+    }
+
+    .back-btn:hover {
+      background: rgba(30, 144, 255, 0.14);
+      /* leve realce azul no hover */
+      transform: translateY(-2px);
+    }
+
+    .back-btn i {
+      font-size: 1.1rem;
+    }
+
+    .thanks-box .icon-check {
+      font-size: 4rem;
+      color: #1E90FF;
+      margin-bottom: 20px;
+    }
+
+    .thanks-box h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #1E90FF;
+    }
+
+    .thanks-box p {
+      font-size: 1.15rem;
+      margin-bottom: 32px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    .btn-voltar {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #1E90FF;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.16s;
+    }
+
+    .btn-voltar:hover {
+      background: #16375a;
+      transform: translateY(-2px);
+    }
+
+    /* responsividade */
+    @media (max-width: 480px) {
+      .thanks-box {
+        padding: 58px 20px 40px;
+      }
+
+      .back-btn {
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+      }
+
+      .thanks-box h1 {
+        font-size: 1.8rem;
+      }
+
+      .thanks-box p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="thanks-box">
+    <!-- botão ícone no canto superior esquerdo -->
+    <a class="back-btn" href="../index.html" aria-label="Voltar para a página inicial">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a>
+
+    <div style="margin-top: 4px;"> <!-- pequeno ajuste para garantir separação visual -->
+      <i class="fa-solid fa-circle-check icon-check" aria-hidden="true"></i>
+      <h1>Formulário Enviado</h1>
+      <p>
+        Agradecemos pelo seu contato. Nossa equipe analisará sua mensagem e retornará o mais breve possível.
+        Caso prefira atendimento imediato, entre em contato pelo telefone ou WhatsApp disponíveis no rodapé.
+      </p>
+
+      <!-- Mantive o botão principal (sem ícone) para acesso adicional -->
+      <a href="../index.html" class="btn-voltar">Voltar para a Página Inicial</a>
+    </div>
+  </div>
+</body>
+
+</html>
