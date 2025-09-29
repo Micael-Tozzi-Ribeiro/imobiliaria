@@ -81,7 +81,7 @@ body {
     letter-spacing: 0.02em;
 }
 
-/* ===== Cabeçalho fixo ===== */
+/* ===== Cabeçalho ===== */
 header {
     position: fixed;
     top: 0;
@@ -92,7 +92,7 @@ header {
     padding: 12px 30px;
     border-bottom: 3px solid #ccc;
     z-index: 999;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 header nav {
@@ -104,32 +104,33 @@ header nav {
     gap: 30px;
 }
 
-header .logo-container img {
-    height: 60px;
-    max-width: 100%;
-    display: block;
-    margin-left: 20px;
-    margin-top: 10px; /* desce 10px o logo */
+main {
+    margin: 160px auto 40px auto;
 }
 
-/* ===== Menu de Navegação ===== */
+header .logo-container img {
+    height: 60px;
+    display: block;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* Menu de Navegação */
 nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
-    margin-left: -40px;
     justify-content: center;
     flex: 1;
 }
 
 nav ul li a {
-    font-family: 'Montserrat', sans-serif;
-    color: #000;
-    text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
     padding: 10px 16px;
     border-radius: 4px;
+    text-decoration: none;
+    color: #000;
     position: relative;
     transition: color 0.3s;
 }
@@ -152,10 +153,8 @@ nav ul li a.ativo::after {
 
 nav ul li a:hover,
 nav ul li a.ativo {
-    background-color: transparent;
     color: #000;
 }
-
 /* ===== Rodapé ===== */
 footer {
     background-color: #222;
