@@ -341,52 +341,25 @@ footer .social-icons a:hover span {
 }
 
 
-/* ===== Responsividade Mobile Completa ===== */
+/* ===== Responsividade Mobile Ajustada ===== */
 
 /* Telas pequenas até 768px */
 @media (max-width: 768px) {
 
-    /* Header */
-    header {
-        padding: 10px 15px;
-    }
-
-    header nav {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    header .logo-container img {
-        height: 50px;
-        margin: 0 auto;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-        padding: 8px 12px;
-    }
-
-    /* Banner */
+    /* Banner maior e texto visível */
     .banner {
-        height: 400px !important; /* banner maior */
+        height: 450px !important; /* aumenta ainda mais a altura do banner */
     }
 
     .banner-texto {
         top: 50%;
         transform: translate(-50%, -50%);
-        padding: 0 10px;
+        padding: 0 15px;
     }
 
     .banner-texto h2 {
-        font-size: 2.2rem !important;
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
     }
 
     .banner-texto button {
@@ -402,9 +375,9 @@ footer .social-icons a:hover span {
     }
 
     .sobre-foto {
-        width: 180px !important;
-        height: 180px !important;
-        border-radius: 50% !important; /* garante círculo */
+        width: 150px !important;   /* reduzimos para evitar distorção */
+        height: 150px !important;  /* largura = altura */
+        border-radius: 50% !important; /* garante círculo perfeito */
         margin: 0 auto 20px auto;
     }
 
@@ -414,7 +387,7 @@ footer .social-icons a:hover span {
     }
 
     .sobre-texto h2 {
-        font-size: 2rem !important;
+        font-size: 1.9rem !important;
     }
 
     .sobre-texto p {
@@ -464,7 +437,7 @@ footer .social-icons a:hover span {
 
     footer .footer-item {
         width: 100% !important;
-        max-width: 300px !important;
+        max-width: 280px !important;
         margin: 0 auto !important;
         text-align: center !important;
     }
@@ -489,11 +462,12 @@ footer .social-icons a:hover span {
 
     /* Banner */
     .banner {
-        height: 350px !important; /* banner ainda maior para celular pequeno */
+        height: 380px !important; /* altura proporcional ao celular */
     }
 
     .banner-texto h2 {
-        font-size: 1.8rem !important;
+        font-size: 1.6rem !important;
+        line-height: 1.2 !important;
     }
 
     .banner-texto button {
@@ -503,14 +477,14 @@ footer .social-icons a:hover span {
 
     /* Sobre Nós */
     .sobre-foto {
-        width: 160px !important;
-        height: 160px !important;
+        width: 130px !important;   /* imagem menor para celular pequeno */
+        height: 130px !important;  /* mantém círculo */
         border-radius: 50% !important;
         margin: 0 auto 15px auto;
     }
 
     .sobre-texto h2 {
-        font-size: 1.6rem !important;
+        font-size: 1.5rem !important;
     }
 
     .sobre-texto p {
