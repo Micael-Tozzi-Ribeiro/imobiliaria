@@ -788,3 +788,94 @@ footer .social-icons a:hover span {
         margin-top: 10px;
     }
 }
+
+/* ===== Responsividade do Modal ===== */
+
+/* Até 768px */
+@media (max-width: 768px) {
+
+  /* Infos do imóvel */
+  .modal-info {
+    flex-direction: column; /* imagem em cima, texto abaixo */
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .modal-info img {
+    width: 100%;
+    max-width: 300px; /* limita o tamanho da imagem */
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .modal-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .modal-info p {
+    font-size: 0.95rem;
+  }
+
+  /* Ações */
+  .modal-acoes {
+    flex-direction: column; /* botões empilhados */
+    gap: 10px;
+  }
+
+  .modal-acoes button {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  /* Formulário */
+  #formEmail {
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  #formEmail input,
+  #formEmail textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  #formEmail button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
+
+/* Até 480px (celulares pequenos) */
+@media (max-width: 480px) {
+
+  .modal-info img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .modal-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .modal-info p {
+    font-size: 0.9rem;
+  }
+
+  .modal-acoes button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  #formEmail input,
+  #formEmail textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  #formEmail button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
