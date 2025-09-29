@@ -375,6 +375,10 @@ footer .social-icons a:hover span {
     }
 
 
+    main {
+        margin-top: 190px;
+    }
+
     /* Banner */
     .banner {
         height: 440px !important; /* mantém o tamanho que você aprovou */
