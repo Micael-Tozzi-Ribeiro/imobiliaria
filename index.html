@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Falcão Imóveis - Inicio</title>
+    <title>Falcão - Inicio</title>
     <link rel="stylesheet" href="CSS/index.css" />
     <!-- Font Awesome CDN para ícones sociais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Google Fonts: Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="IMG/icon-bg.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="IMG/icon-bg.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="IMG/icon-bg.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="IMG/logo-preta.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="IMG/logo-preta.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="IMG/logo-preta.png">
 </head>
 
 <body>
@@ -22,25 +22,44 @@
 
 
     <!-- Cabeçalho -->
+    <!-- ===== HEADER NOVO ===== -->
     <header>
-        <div class="logo-container">
-            <img src="IMG/logo-r.png" alt="Logo da Escola José Marcato">
-        </div>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="IMG/logo-f.png" alt="Logo Falcão Imóveis" class="logo-img">
+                <a class="logo-text" href="index.html">Falcão Negócios Imobiliários</a>
+            </div>
+
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <ul class="nav-list">
                 <li><a href="index.html" class="ativo">Início</a></li>
                 <li><a href="HTML/sobre.html">Sobre Nós</a></li>
                 <li><a href="HTML/imoveis.html">Imóveis</a></li>
                 <li><a href="HTML/contato.html">Contato</a></li>
+                <li>
+                    <a href="https://wa.me/message/7H7VRVKPNZXNK1" target="_blank" class="whatsapp-btn"
+                        title="Fale conosco no WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
+
     <!-- Banner -->
     <section class="banner">
         <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/house-1867187_640.jpg" alt="Banner Cursos Técnicos">
         <div class="banner-texto">
             <h2>Conheça nossos imóveis</h2>
-            <a href="HTML/imoveis.html" class="btn-imoveis">Ver imóveis</a>
+            <div class="banner-buttons">
+                <a href="HTML/imoveis.html" class="btn-imoveis">Ver imóveis</a>
+                <a href="HTML/contato.html" class="btn-contato">Entre em Contato</a>
+            </div>
         </div>
     </section>
 
@@ -78,7 +97,8 @@
                 <p>Preencha o formulário abaixo e entraremos em contato com você o mais rápido possível.</p>
                 <form id="form-contato" action="https://formsubmit.co/micael.tozzi.ribeiro@gmail.com" method="POST">
                     <!-- Ocultos do FormSubmit -->
-                    <input type="hidden" name="_next" value="https://micael-tozzi-ribeiro.github.io/imobiliaria/HTML/obrigado.html">
+                    <input type="hidden" name="_next"
+                        value="https://micael-tozzi-ribeiro.github.io/imobiliaria/HTML/obrigado.html">
                     <!-- página de obrigado -->
                     <input type="hidden" name="_captcha" value="false"> <!-- desativa captcha -->
                     <input type="hidden" name="_template" value="box"> <!-- layout do email -->
@@ -101,43 +121,87 @@
         <div class="footer-item">
             <h4>Contato</h4>
             <p>Telefone: (11) 4048-1353</p>
-            <p>Email: e915749a@educacao.sp.gov.br</p>
+            <p>Email: falcaoair@yahoo.com.br</p>
         </div>
         <div class="footer-item">
-            <h4>Endereço</h4>
-            <p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Rua+Visconde+de+Itaborai,+235,+Diadema,+SP"
-                    target="_blank" class="map-link" aria-label="Abrir localização no Google Maps">
-                    <i class="fas fa-map-marker-alt"></i> Rua Visconde de Itaborai, 235
-                </a>
-            </p>
-            <p>Centro - Diadema</p>
-            <p>CEP: 09910-520</p>
+            <h4>Páginas</h4>
+            <p><a href="index.html">Inicio</a></p>
+            <p><a href="HTML/sobre.html">Sobre nós</a></p>
+            <p><a href="HTML/imoveis.html">Imóveis</a></p>
+            <p><a href="HTML/contato.html">Contato</a></p>
         </div>
         <div class="footer-item">
             <h4>Redes Sociais</h4>
             <div class="social-icons">
-                <a href="#" target="_blank" aria-label="Facebook">
+                <a href="https://www.facebook.com/share/17VR5N5ceR/" target="_blank" aria-label="Facebook">
                     <i class="fab fa-facebook-f"></i> Facebook
                 </a>
-                <a href="#" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/marcospaulofalcaoo?utm_source=qr&igsh=eXh6NWZwMWJnOTg0" target="_blank" aria-label="Instagram">
                     <i class="fab fa-instagram"></i> Instagram
                 </a>
-                <a href="https://wa.me/551140481353?text=Olá,+gostaria+de+mais+informações+sobre+seus+imóveis."
+                <a href="https://wa.me/message/7H7VRVKPNZXNK1"
                     target="_blank" aria-label="WhatsApp">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
-                <a href="https://www.linkedin.com/feed/" target="_blank" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/o-corretor-falc%C3%A3o-47a1a636a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
                     <i class="fab fa-linkedin-in"></i> LinkedIn
                 </a>
             </div>
         </div>
         <div class="copyright">
             &copy; 2025 Falcão Imóveis - Todos os direitos reservados
+            <br>
+            Desenvolvido por <a href="https://www.instagram.com/micaeltozzi" target="_blank" class="micaeltr"> @Micael Tozzi Ribeiro </a>
         </div>
     </footer>
 
 </body>
+
+
+<script>
+    class MobileNavbar {
+        constructor(mobileMenu, navList, navLinks) {
+            this.mobileMenu = document.querySelector(mobileMenu);
+            this.navList = document.querySelector(navList);
+            this.navLinks = document.querySelectorAll(navLinks);
+            this.activeClass = "active";
+
+            this.handleClick = this.handleClick.bind(this);
+        }
+
+        animateLinks() {
+            this.navLinks.forEach((link, index) => {
+                link.style.animation
+                    ? (link.style.animation = "")
+                    : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`);
+            });
+        }
+
+        handleClick() {
+            this.navList.classList.toggle(this.activeClass);
+            this.mobileMenu.classList.toggle(this.activeClass);
+            this.animateLinks();
+        }
+
+        addClickEvent() {
+            this.mobileMenu.addEventListener("click", this.handleClick);
+        }
+
+        init() {
+            if (this.mobileMenu) {
+                this.addClickEvent();
+            }
+            return this;
+        }
+    }
+
+    const mobileNavbar = new MobileNavbar(
+        ".mobile-menu",
+        ".nav-list",
+        ".nav-list li"
+    );
+    mobileNavbar.init();
+</script>
 
 <script src="../JS/imoveis.js">
 </script>
