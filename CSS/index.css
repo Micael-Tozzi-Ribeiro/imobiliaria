@@ -1,96 +1,101 @@
 /* ===== Reset Básico ===== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  background-color: #222;
-  color: #fff;
-  line-height: 1.6;
-  padding-top: 80px; /* espaço para o header fixo */
+    background-color: #222;
+    color: #fff;
+    line-height: 1.6;
+    padding-top: 80px;
+    /* espaço para o header fixo */
 }
 
 /* ===== HEADER RESPONSIVO ===== */
 header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #23232e;
-  height: 80px;
-  padding: 0 30px;
-  font-family: 'Montserrat', sans-serif;
-  border-bottom: 3px solid #1E90FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #23232e;
+    height: 80px;
+    padding: 0 30px;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 3px solid #1E90FF;
 }
 
 /* Logo + texto */
 .logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .logo-img {
-  height: 55px;
-  width: auto;
+    height: 55px;
+    width: auto;
 }
 
 .logo-text {
-  color: #fff;
-  font-size: 1.3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
-  transition: 0.3s;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .logo-text:hover {
-  color: #1E90FF;
+    color: #1E90FF;
 }
 
 /* Links */
 .nav-list {
-  list-style: none;
-  display: flex;
-  align-items: center; /* garante que texto e botão fiquem centralizados */
+    list-style: none;
+    display: flex;
+    align-items: center;
+    /* garante que texto e botão fiquem centralizados */
 }
 
 .nav-list li {
-  margin-left: 32px;
-  align-items: center; /* garante que texto e botão fiquem centralizados */
-  display: flex;
+    margin-left: 32px;
+    align-items: center;
+    /* garante que texto e botão fiquem centralizados */
+    display: flex;
 }
 
 .nav-list li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s;
-  position: relative; /* importante para o ::after */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+    position: relative;
+    /* importante para o ::after */
 }
 
 .nav-list li a::after {
     content: "";
     position: absolute;
-    bottom: -4px; /* distância da base do link */
+    bottom: -4px;
+    /* distância da base do link */
     left: 0;
     width: 0%;
     height: 2px;
@@ -100,300 +105,307 @@ header {
 
 .nav-list li a:hover::after,
 .nav-list li a.ativo::after {
-    width: 100%; /* underline total quando ativo ou hover */
+    width: 100%;
+    /* underline total quando ativo ou hover */
 }
 
 /* Botão mobile */
 .mobile-menu {
-  display: none;
-  cursor: pointer;
+    display: none;
+    cursor: pointer;
 }
 
 .mobile-menu div {
-  width: 32px;
-  height: 2px;
-  background: #fff;
-  margin: 8px;
-  transition: 0.3s;
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
 }
 
 /* ===== Ícone do WhatsApp na Navbar ===== */
-      .whatsapp-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #25d366;
-        border-radius: 50%;
-        width: 44px;
-        height: 44px;
-        font-size: 1.8rem;
-        color: #fff;
-        transition: all 0.25s ease;
-        box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
-      }
+.whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.8rem;
+    color: #fff;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+}
 
-      .whatsapp-btn:hover {
-        background-color: #20ba5a;
-        transform: scale(1.1);
-        box-shadow: 0 0 18px rgba(37, 211, 102, 0.7);
-      }
+.whatsapp-btn:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1);
+    box-shadow: 0 0 18px rgba(37, 211, 102, 0.7);
+}
 
-      @media (max-width: 999px) {
-        .whatsapp-btn {
-          width: 55px;
-          height: 55px;
-          font-size: 2.1rem;
-        }
-      }
+@media (max-width: 999px) {
+    .whatsapp-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 2.1rem;
+    }
+}
 
 
 /* ===== Responsividade ===== */
 @media (max-width: 999px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .nav-list {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 60vw;
-    height: 92vh;
-    background: #23232e;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-  }
-
-  .nav-list li {
-    opacity: 0;
-  }
-
-  .mobile-menu {
-    display: block;
-  }
-
-  .nav-list.active {
-    transform: translateX(0);
-  }
-
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
+    body {
+        overflow-x: hidden;
     }
-    to {
-      opacity: 1;
-      transform: translateX(0);
+
+    .nav-list {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 60vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
     }
-  }
 
-  .mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-  }
+    .nav-list li {
+        opacity: 0;
+    }
 
-  .mobile-menu.active .line2 {
-    opacity: 0;
-  }
+    .mobile-menu {
+        display: block;
+    }
 
-  .mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-  }
+    .nav-list.active {
+        transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+
+    .mobile-menu.active .line2 {
+        opacity: 0;
+    }
+
+    .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
 }
 
 /* ===== Banner ===== */
 .banner {
-  position: relative;
-  width: 100%;
-  height: 450px;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
 }
 
 .banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(60%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
 }
 
 .banner-texto {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
 }
 
 .banner-texto h2 {
-  font-size: 3rem;
-  color: #1E90FF;
-  margin-bottom: 20px;
+    font-size: 3rem;
+    color: #1E90FF;
+    margin-bottom: 20px;
 }
 
 .banner-texto button {
-  padding: 14px 30px;
-  background-color: #1E90FF;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s;
+    padding: 14px 30px;
+    background-color: #1E90FF;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .banner-texto button:hover {
-  background-color: #16375a;
+    background-color: #16375a;
 }
 
 .banner-buttons {
     display: flex;
-    gap: 15px; /* espaço entre os botões */
-    justify-content: center; /* centraliza os botões */
+    gap: 15px;
+    /* espaço entre os botões */
+    justify-content: center;
+    /* centraliza os botões */
     margin-top: 20px;
 }
 
 .btn-contato {
     display: inline-block;
     padding: 14px 30px;
-    background-color: #555; /* cinza */
+    background-color: #555;
+    /* cinza */
     color: #fff;
     font-size: 1.2rem;
     font-weight: 600;
     text-decoration: none;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn-contato:hover {
-    background-color: #333; /* cinza mais escuro ao passar o mouse */
-    transform: translateY(-2px); /* efeito leve de “levitar” */
+    background-color: #333;
+    /* cinza mais escuro ao passar o mouse */
+    transform: translateY(-2px);
+    /* efeito leve de “levitar” */
 }
 
 
 /* ===== Sobre Nós ===== */
 .sobre-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 80px;
-  padding: 100px 40px;
-  width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 100px 40px;
+    width: 100%;
 }
 
 .sobre-foto {
-  flex: 0 0 350px;
-  height: 350px;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: #444;
+    flex: 0 0 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #444;
 }
 
 .sobre-foto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .sobre-texto {
-  flex: 1;
-  min-width: 400px;
+    flex: 1;
+    min-width: 400px;
 }
 
 .sobre-texto h2 {
-  font-size: 3rem;
-  margin-bottom: 25px;
-  color: #1E90FF;
+    font-size: 3rem;
+    margin-bottom: 25px;
+    color: #1E90FF;
 }
 
 .sobre-texto p {
-  font-size: 1.2rem;
-  line-height: 2;
-  margin-bottom: 20px;
-  color: #eee;
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 20px;
+    color: #eee;
 }
 
 /* ===== Contato Rápido ===== */
 .contato-container {
-  padding: 100px 40px;
-  color: #eee;
-  text-align: center;
-  width: 100%;
+    padding: 100px 40px;
+    color: #eee;
+    text-align: center;
+    width: 100%;
 }
 
 .contato-container h2 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  color: #1E90FF;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #1E90FF;
 }
 
 .contato-container p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
 }
 
 #form-contato {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 600px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 #form-contato input,
 #form-contato textarea {
-  padding: 15px 18px;
-  font-size: 1.1rem;
-  border: 1px solid #555;
-  border-radius: 10px;
-  resize: none;
-  background-color: #333;
-  color: #fff;
+    padding: 15px 18px;
+    font-size: 1.1rem;
+    border: 1px solid #555;
+    border-radius: 10px;
+    resize: none;
+    background-color: #333;
+    color: #fff;
 }
 
 #form-contato input:focus,
 #form-contato textarea:focus {
-  outline: none;
-  border-color: #1E90FF;
-  box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
+    outline: none;
+    border-color: #1E90FF;
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
 }
 
 #form-contato button {
-  padding: 15px 25px;
-  font-size: 1.1rem;
-  background-color: #1E90FF;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    background-color: #1E90FF;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 #form-contato button:hover {
-  background-color: #16375a;
+    background-color: #16375a;
 }
 
 /* ===== Botão Imóveis ===== */
 a.btn-imoveis {
-  display: inline-block;
-  padding: 14px 30px;
-  background-color: #1E90FF;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #1E90FF;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 a.btn-imoveis:hover {
-  background-color: #16375a;
-  transform: translateY(-2px);
+    background-color: #16375a;
+    transform: translateY(-2px);
 }
 
 
@@ -469,13 +481,13 @@ footer .social-icons a:hover span {
 }
 
 footer .copyright {
-  width: 100%;
-  margin-top: 20px;
-  border-top: 1px solid #555;
-  padding-top: 15px;
-  font-size: 0.85rem;
-  color: #aaa;
-  text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #aaa;
+    text-align: center;
 }
 
 .micaeltr {
@@ -489,60 +501,74 @@ footer .copyright {
 
 /* Espaçamento extra para a coluna "Páginas" no footer */
 footer .footer-item:nth-child(2) {
-    margin-left: 90px; /* ajusta a distância da coluna de Contato */
+    margin-left: 90px;
+    /* ajusta a distância da coluna de Contato */
 }
 
 
 @media (max-width: 999px) {
 
-  /* ===== Header ===== */
-  .logo-text {
-    font-size: 1rem; /* reduz o tamanho do texto */
-  }
+    /* ===== Header ===== */
+    .logo-text {
+        font-size: 1rem;
+        /* reduz o tamanho do texto */
+    }
 
-  .logo-img {
-    height: 45px; /* ajusta a altura do logo */
-  }
+    .logo-img {
+        height: 45px;
+        /* ajusta a altura do logo */
+    }
 
-  /* ===== Banner ===== */
-  .banner-texto h2 {
-    font-size: 2rem; /* reduz título do banner */
-  }
+    /* ===== Banner ===== */
+    .banner-texto h2 {
+        font-size: 2rem;
+        /* reduz título do banner */
+    }
 
-  .banner-buttons a,
-  .banner-texto button {
-    padding: 10px 20px; /* reduz tamanho dos botões */
-    font-size: 1rem; /* reduz texto dos botões */
-  }
+    .banner-buttons a,
+    .banner-texto button {
+        padding: 10px 20px;
+        /* reduz tamanho dos botões */
+        font-size: 1rem;
+        /* reduz texto dos botões */
+    }
 
-  .banner-buttons {
-    flex-direction: column; /* empilha os botões no mobile */
-    gap: 10px;
-  }
+    .banner-buttons {
+        flex-direction: column;
+        /* empilha os botões no mobile */
+        gap: 10px;
+    }
 
-  /* ===== Sobre Nós ===== */
-  .sobre-container {
-    flex-direction: column; /* empilha imagem e texto */
-    padding: 60px 20px;
-    gap: 40px;
-  }
+    /* ===== Sobre Nós ===== */
+    .sobre-container {
+        flex-direction: column;
+        /* empilha imagem e texto */
+        padding: 60px 20px;
+        gap: 40px;
+    }
 
-  .sobre-foto {
-    flex: 0 0 250px; /* reduz tamanho da foto */
-    height: 250px;
-  }
+    .sobre-texto {
+        min-width: auto;
+        /* permite o texto ocupar toda a largura */
+        text-align: center;
+        /* centraliza o texto */
+    }
 
-  .sobre-texto {
-    min-width: auto; /* permite o texto ocupar toda a largura */
-    text-align: center; /* centraliza o texto */
-  }
+    .sobre-texto h2 {
+        font-size: 2rem;
+        /* reduz título */
+    }
 
-  .sobre-texto h2 {
-    font-size: 2rem; /* reduz título */
-  }
+    .sobre-texto p {
+        font-size: 1rem;
+        /* reduz texto */
+        line-height: 1.5;
+        /* melhora leitura */
+    }
 
-  .sobre-texto p {
-    font-size: 1rem; /* reduz texto */
-    line-height: 1.5; /* melhora leitura */
-  }
+    /* Espaçamento extra para a coluna "Páginas" no footer */
+    footer .footer-item:nth-child(2) {
+        margin-right: 90px;
+        /* ajusta a distância da coluna de Contato */
+    }
 }
