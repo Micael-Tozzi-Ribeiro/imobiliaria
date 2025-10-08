@@ -418,3 +418,24 @@ footer .footer-item:nth-child(2) {
 .micaeltr:hover {
     text-decoration: underline;
 }
+
+
+/* ===== Responsividade para Nossa História ===== */
+@media (max-width: 1024px) {
+    .historia-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .historia-container .historia-img,
+    .historia-container .historia-texto {
+        max-width: 90%;
+    }
+
+    .historia-container .historia-img img {
+        width: 100%;
+        height: auto;
+    }
+}
