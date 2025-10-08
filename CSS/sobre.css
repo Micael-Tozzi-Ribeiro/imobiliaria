@@ -353,21 +353,10 @@ footer .footer-item:nth-child(2) {
 }
 
 @media (max-width: 1024px) {
-    .falcao-img img {
-        width: 280px;
-        height: 280px;
-    }
     .historia-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }
-    .historia-container .historia-img img {
-        width: 80%;
-        height: auto;
-    }
-    .historia-container .historia-texto {
-        min-width: 90%;
     }
 }
 
@@ -379,11 +368,6 @@ footer .footer-item:nth-child(2) {
         align-items: center;
         text-align: center;
         gap: 2rem;
-    }
-    .historia-container .historia-img img,
-    .falcao-img img {
-        width: 80%;
-        height: auto;
     }
     .historia-container .historia-texto,
     .falcao-texto {
