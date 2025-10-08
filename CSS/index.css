@@ -491,3 +491,58 @@ footer .copyright {
 footer .footer-item:nth-child(2) {
     margin-left: 90px; /* ajusta a distância da coluna de Contato */
 }
+
+
+@media (max-width: 999px) {
+
+  /* ===== Header ===== */
+  .logo-text {
+    font-size: 1rem; /* reduz o tamanho do texto */
+  }
+
+  .logo-img {
+    height: 45px; /* ajusta a altura do logo */
+  }
+
+  /* ===== Banner ===== */
+  .banner-texto h2 {
+    font-size: 2rem; /* reduz título do banner */
+  }
+
+  .banner-buttons a,
+  .banner-texto button {
+    padding: 10px 20px; /* reduz tamanho dos botões */
+    font-size: 1rem; /* reduz texto dos botões */
+  }
+
+  .banner-buttons {
+    flex-direction: column; /* empilha os botões no mobile */
+    gap: 10px;
+  }
+
+  /* ===== Sobre Nós ===== */
+  .sobre-container {
+    flex-direction: column; /* empilha imagem e texto */
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .sobre-foto {
+    flex: 0 0 250px; /* reduz tamanho da foto */
+    height: 250px;
+  }
+
+  .sobre-texto {
+    min-width: auto; /* permite o texto ocupar toda a largura */
+    text-align: center; /* centraliza o texto */
+  }
+
+  .sobre-texto h2 {
+    font-size: 2rem; /* reduz título */
+  }
+
+  .sobre-texto p {
+    font-size: 1rem; /* reduz texto */
+    line-height: 1.5; /* melhora leitura */
+  }
+}
