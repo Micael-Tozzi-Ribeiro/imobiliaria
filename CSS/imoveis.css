@@ -899,6 +899,15 @@ footer .footer-item:nth-child(2) {
     }
 }
 
+.localizacao {
+  text-decoration: none;
+  color: white;
+}
+
+.localizacao:hover {
+  text-decoration: underline;
+}
+
 .micaeltr {
     color: white;
     text-decoration: none;
