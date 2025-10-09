@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Falcão Imóveis - Imóveis</title>
+    <title>Falcão - Imóveis</title>
     <link rel="stylesheet" href="../CSS/imoveis.css" />
     <!-- Font Awesome CDN para ícones sociais -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -27,7 +27,7 @@
         <nav class="navbar">
             <div class="logo-container">
                 <img src="../IMG/logo-f.png" alt="Logo Falcão Imóveis" class="logo-img">
-                <a class="logo-text" href="sobre.html">Falcão Negócios Imobiliários</a>
+                <a class="logo-text" href="imoveis.html">Falcão Negócios Imobiliários</a>
             </div>
 
             <div class="mobile-menu">
@@ -69,10 +69,9 @@
                 <button class="pill" data-filter="alugar" aria-pressed="false">Alugar</button>
                 <button class="limpar">Limpar</button>
                 <select class="sort">
-                    <option value="todos">Filtrar por Estado</option>
-                    <option value="sp">São Paulo</option>
-                    <option value="rj">Rio de Janeiro</option>
-                    <option value="mg">Minas Gerais</option>
+                    <option value="todos">Filtrar por Região</option>
+                    <option value="piraporinha">Piraporinha</option>
+                    <option value="diadema">Diadema</option>
                     <!-- Adicione outros estados aqui -->
                 </select>
                 <p class="text">Exibindo <span id="counter">0</span> itens!</p>
@@ -84,7 +83,7 @@
 
     <!-- Conteúdo -->
     <main class="galeria">
-        <article class="card-imovel" data-tipo="comprar" data-estado="sp">
+        <article class="card-imovel" data-tipo="comprar" data-estado="piraporinha">
             <div class="card-img">
                 <div class="carousel">
                     <img src="../IMG/Ap1 (1).jpg"
@@ -114,9 +113,9 @@
             </div>
             <div class="card-info">
                 <h3>Avere Piraporinha</h3>
-                <p class="localizacao"><i class="fa-solid fa-location-dot"></i> Rio de Janeiro - Condomínio Barra 488
+                <p class="localizacao"><i class="fa-solid fa-location-dot"></i> Av. Encarnação, Piraporinha, Diadema
                 </p>
-                <p class="preco"><strong>Preço:</strong> R$ 200.000</p>
+                <p class="preco"><strong>Preço:</strong> R$ 309.482</p>
                 <div class="detalhes">
                     <div class="detalhe">
                         <p><i class="fa-solid fa-bed"></i> 2 Quartos</p>
@@ -127,13 +126,13 @@
                         <p><i class="fa-solid fa-ruler-combined"></i> 41 à 43 m²</p>
                     </div>
                 </div>
-                <p class="descricao">à 5 minutos do terminal Piraporinha, projeto minha casa minha, ideal para quem quer morar na região vida venha conhecer
+                <p class="descricao">à 5 minutos do terminal Piraporinha, projeto minha casa minha, ideal para quem quer morar na região, venha conhecer
                 </p>
                 <a href="#detalhes" class="btn-detalhes">Entrar em contato</a>
             </div>
         </article>
 
-        <article class="card-imovel" data-tipo="alugar" data-estado="sp">
+        <article class="card-imovel" data-tipo="alugar" data-estado="diadema">
             <div class="card-img">
                 <div class="carousel">
                     <img src="../IMG/Ap2 (1).jpg"
@@ -159,25 +158,25 @@
             </div>
             <div class="card-info">
                 <h3>Vivere Diadema</h3>
-                <p class="localizacao"><i class="fa-solid fa-location-dot"></i> São Paulo - Jardins, Rua Bela
-                    Vista 120</p>
-                <p class="preco"><strong>Preço:</strong> R$ 3.200/mês</p>
+                <p class="localizacao"><i class="fa-solid fa-location-dot"></i> Rua General 
+                Rondon, Centro, Diadema</p>
+                <p class="preco"><strong>Preço:</strong> R$ 544.374</p>
                 <div class="detalhes">
                     <div class="detalhe">
                         <p><i class="fa-solid fa-bed"></i> 2 Quartos</p>
-                        <p><i class="fa-solid fa-bath"></i> 1 Banheiros</p>
+                        <p><i class="fa-solid fa-bath"></i> 2 Banheiros</p>
                     </div>
                     <div class="detalhe">
                         <p><i class="fa-solid fa-car"></i> 1 Vaga</p>
-                        <p><i class="fa-solid fa-ruler-combined"></i> 54,75 m²</p>
+                        <p><i class="fa-solid fa-ruler-combined"></i> 54 m²</p>
                     </div>
                 </div>
-                <p class="descricao">Localizado ao lado da pista de trólebus no centro de Diadema uma exelente opção pra quem quer morar perto de tudo.</p>
+                <p class="descricao">Ainda em contrução o imovel conta com uma suite e está Localizado ao lado do shopping praça da moça.</p>
                 <a href="#detalhes" class="btn-detalhes">Entrar em contato</a>
             </div>
         </article>
 
-                <article class="card-imovel" data-tipo="alugar" data-estado="sp">
+                <article class="card-imovel" data-tipo="alugar" data-estado="diadema">
             <div class="card-img">
                 <div class="carousel">
                     <img src="../IMG/Ap2 (1).jpg"
@@ -203,20 +202,19 @@
             </div>
             <div class="card-info">
                 <h3>Vivere Diadema</h3>
-                <p class="localizacao"><i class="fa-solid fa-location-dot"></i> São Paulo - Jardins, Rua Bela
-                    Vista 120</p>
-                <p class="preco"><strong>Preço:</strong> R$ 4.200/mês</p>
+                <p class="localizacao"><i class="fa-solid fa-location-dot"></i> Rua General Rondon, Centro, Diadema</p>
+                <p class="preco"><strong>Preço:</strong> R$ 671.147</p>
                 <div class="detalhes">
                     <div class="detalhe">
                         <p><i class="fa-solid fa-bed"></i> 3 Quartos</p>
-                        <p><i class="fa-solid fa-bath"></i> 1 Banheiros</p>
+                        <p><i class="fa-solid fa-bath"></i> 2 Banheiros</p>
                     </div>
                     <div class="detalhe">
                         <p><i class="fa-solid fa-car"></i> 1 Vaga</p>
-                        <p><i class="fa-solid fa-ruler-combined"></i> 67,50 m²</p>
+                        <p><i class="fa-solid fa-ruler-combined"></i> 67 m²</p>
                     </div>
                 </div>
-                <p class="descricao">Localizado ao lado da pista de trólebus no centro de Diadema uma exelente opção pra quem quer morar perto de tudo.</p>
+                <p class="descricao">Ainda em contrução o imovel conta com uma suite e está Localizado ao lado do shopping praça da moça.</p>
                 <a href="#detalhes" class="btn-detalhes">Entrar em contato</a>
             </div>
         </article>
@@ -271,7 +269,7 @@
     <footer>
         <div class="footer-item">
             <h4>Contato</h4>
-            <p>Telefone: (11) 4048-1353</p>
+            <p>Telefone: +55 11 98308-9167  </p>
             <p>Email: falcaoair@yahoo.com.br</p>
         </div>
         <div class="footer-item">

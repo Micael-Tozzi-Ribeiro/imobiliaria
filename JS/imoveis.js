@@ -1,33 +1,3 @@
-// ==================== DARK MODE ====================
-const themeToggleButtons = document.querySelectorAll('[data-bs-theme-value]');
-const themeIconUse = document.querySelector('.theme-icon-active use');
-
-const icons = {
-    light: "#sun-fill",
-    dark: "#moon-stars-fill",
-    auto: "#circle-half"
-};
-
-function setTheme(theme) {
-    document.documentElement.setAttribute('data-bs-theme', theme);
-
-    themeToggleButtons.forEach(btn => {
-        const svgCheck = btn.querySelector('svg.ms-auto');
-        if (svgCheck) svgCheck.classList.add('d-none');
-    });
-
-    const activeCheck = document.querySelector(`[data-bs-theme-value="${theme}"] svg.ms-auto`);
-    if (activeCheck) activeCheck.classList.remove('d-none');
-
-    if (themeIconUse) {
-        try {
-            themeIconUse.setAttribute('href', icons[theme]);
-        } catch (e) {
-            themeIconUse.setAttributeNS('http://www.w3.org/1999/xlink', 'href', icons[theme]);
-        }
-    }
-}
-
 // ==================== CARROSSEL POR CARD ====================
 document.querySelectorAll('.card-imovel').forEach(card => {
     const imgs = card.querySelectorAll('.carousel-img');
@@ -184,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Botão WhatsApp com mensagem dinâmica
       btnWhatsApp.onclick = () => {
         const msg = encodeURIComponent(`Olá, tenho interesse no imóvel "${titulo}" localizado em ${endereco}.`);
-        window.open(`https://wa.me/551140481353?text=${msg}`, "_blank");
+        window.open(`https://wa.me/5511983089167?text=${msg}`, "_blank");
       };
 
       // Mostrar form de email
